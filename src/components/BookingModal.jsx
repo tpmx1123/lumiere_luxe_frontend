@@ -56,7 +56,7 @@ const BookingModal = ({ isOpen, onClose }) => {
     <div className="booking-modal-overlay" onClick={handleClose}>
       <div className="booking-modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2 className="modal-title">Book Your Appointmenthttps://github.com/tpmx1123/lumiere_luxe.git</h2>
+          <h2 className="modal-title">Book Your Appointment</h2>
           <button className="close-button" onClick={handleClose}>
             ✕
           </button>
