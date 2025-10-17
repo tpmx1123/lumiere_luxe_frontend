@@ -40,24 +40,48 @@ const Footer = () => {
                 alt="Logo" 
                 className="footer-logo"
               />
-              <p className="lumiere-text">
-                Step into Lumiere and experience the <br/>transformative power of true luxury.
-                <br />Where science meets style, and <br/>every visit feels like renewal.
-                <br />Your radiant journey awaits.
-              </p>
+              <div className="logo-content">
+                <p className="lumiere-text">
+                  Step into Lumiere and experience the transformative power of true luxury.
+                  Where science meets style, and every visit feels like renewal.
+                  <br />Your radiant journey awaits.
+                </p>
+                <div className="social-icons">
+                  <button 
+                    onClick={() => handleSocialClick('Facebook')} 
+                    className="social-icon" 
+                    aria-label="Facebook"
+                  >
+                    <img src={facebookIcon} alt="Facebook" className="social-icon-img" />
+                  </button>
+                  <a 
+                    href="https://www.instagram.com/lumiereluxe_sasha?utm_source=ig_web_button_share_sheet&igsh=MWZ1ZnkweGZzMDlndA==" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="social-icon" 
+                    aria-label="Instagram"
+                  >
+                    <img src={instagramIcon} alt="Instagram" className="social-icon-img" />
+                  </a>
+                  <button 
+                    onClick={() => handleSocialClick('YouTube')} 
+                    className="social-icon" 
+                    aria-label="YouTube"
+                  >
+                    <img src={youtubeIcon} alt="YouTube" className="social-icon-img" />
+                  </button>
+                </div>
+              </div>
             </div>
             
             <div className="footer-sections">
               <div className="footer-section">
                 <h3 className="footer-heading">Our Store</h3>
-                <div className="store-info">
-                  
-                  <div className="footer-links">
-                    <a href="/" className="footer-link">Home</a>
-                    <a href="/about" className="footer-link">About</a>
-                    <a href="/services" className="footer-link">Services</a>
-                    <a href="/contact" className="footer-link">Contact</a>
-                  </div>
+                <div className="footer-links">
+                  <a href="/" className="footer-link">Home</a>
+                  <a href="/about" className="footer-link">About</a>
+                  <a href="/services" className="footer-link">Services</a>
+                  <a href="/contact" className="footer-link">Contact</a>
                 </div>
               </div>
               
@@ -83,32 +107,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="social-icons">
-            <button 
-              onClick={() => handleSocialClick('Facebook')} 
-              className="social-icon" 
-              aria-label="Facebook"
-            >
-              <img src={facebookIcon} alt="Facebook" className="social-icon-img" />
-            </button>
-            <a 
-              href="https://www.instagram.com/lumiereluxe_sasha?utm_source=ig_web_button_share_sheet&igsh=MWZ1ZnkweGZzMDlndA==" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="social-icon" 
-              aria-label="Instagram"
-            >
-              <img src={instagramIcon} alt="Instagram" className="social-icon-img" />
-            </a>
-            <button 
-              onClick={() => handleSocialClick('YouTube')} 
-              className="social-icon" 
-              aria-label="YouTube"
-            >
-              <img src={youtubeIcon} alt="YouTube" className="social-icon-img" />
-            </button>
           </div>
 
           {/* Toast Notification */}
