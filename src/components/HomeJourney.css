@@ -1,0 +1,243 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap');
+
+.home-journey-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Section - Begin Your Journey */
+.journey-top-section {
+  background-color: #ffffff;
+  padding: 80px 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.journey-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.journey-main-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #2C2521;
+  margin: 0 0 30px 0;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.journey-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description-line {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #7C716A;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Bottom Section - Visit Lumiere */
+.journey-bottom-section {
+  background-color: #F5F2ED;
+  padding: 30px 20px 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.visit-content {
+  text-align: center;
+ 
+  width: 100%;
+}
+
+.visit-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #2C2521;
+  margin: 0 0 80px 0;
+  line-height: 1.2;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px 5px;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #7C716A;
+  margin-top: 2px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #2C2521;
+  margin: 0;
+}
+
+.contact-value {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: .8rem;
+  color: #7C716A;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.book-appointment-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  background-color: #906B39;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 250px;
+}
+
+.book-appointment-btn:hover {
+  background-color: #7a5a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(144, 107, 57, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .journey-top-section {
+    padding: 80px 20px 60px 20px;
+  }
+  
+  .journey-main-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  
+  .description-line {
+    font-size: 1.1rem;
+  }
+  
+  .journey-bottom-section {
+    padding: 60px 20px 80px 20px;
+  }
+  
+  .visit-title {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .contact-item {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .contact-details {
+    align-items: flex-start;
+  }
+  
+  .book-appointment-btn {
+    padding: 16px 35px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-top-section {
+    padding: 60px 15px 40px 15px;
+  }
+  
+  .journey-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .description-line {
+    font-size: 1rem;
+  }
+  
+  .journey-bottom-section {
+    padding: 40px 15px 60px 15px;
+  }
+  
+  .visit-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+  
+  .contact-grid {
+    gap: 35px;
+    margin-bottom: 50px;
+  }
+  
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-icon {
+    margin-top: 0;
+  }
+  
+  .contact-label {
+    font-size: 0.95rem;
+  }
+  
+  .contact-value {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .book-appointment-btn {
+    padding: 14px 30px;
+    font-size: 0.9rem;
+    min-width: 200px;
+  }
+}
