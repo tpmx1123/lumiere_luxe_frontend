@@ -42,9 +42,7 @@ const Footer = () => {
               />
               <div className="logo-content">
                 <p className="lumiere-text">
-                  Step into Lumiere and experience the transformative power of true luxury.
-                  Where science meets style, and every visit feels like renewal.
-                  <br />Your radiant journey awaits.
+                  Step into Lumiere and experience the transformative power of true luxury. Where science meets style, and every visit feels like renewal. Your radiant journey awaits.
                 </p>
                 <div className="social-icons">
                   <button 
@@ -90,7 +88,7 @@ const Footer = () => {
                 <div className="contact-info">
                   <div className="contact-link">
                     <img src={locationIcon} alt="Location" className="contact-icon" />
-                    <span>Ground floor 3-184, Beside Hotel Serenity La Serene,<br />Kavuri hills, madhapur, Hyderabad</span>
+                    <span>Ground floor 3-184, Beside Hotel Serenity La Serene, Kavuri hills, madhapur, Hyderabad</span>
                   </div>
                   <a href="tel:+919234569999" className="contact-link">
                     <img src={callIcon} alt="Call" className="contact-icon" />
