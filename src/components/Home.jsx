@@ -35,7 +35,15 @@ const Home = () => {
       
       {/* Content Overlay */}
       <div className="home-content-overlay">
-        <div className="overlay-content">
+        <div 
+          className="overlay-content"
+          style={{
+            backgroundImage: `url(${homeEffectBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
           <h1 className="main-title">LUMIÈRE</h1>
           <p className="tagline">Where Glow Meets Grace</p>
           <p className="descriptions">
