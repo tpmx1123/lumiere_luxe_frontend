@@ -1,6 +1,5 @@
 import React from 'react';
 import './HomeProduct.css';
-import homeProductsBg from '../assets/homeproductsbg.png';
 import davinesLogo from '../assets/davines-logo.png';
 import schwarzkopfLogo from '../assets/skr_logo.png';
 import qodLogo from '../assets/qod-logo.png';
@@ -39,9 +38,7 @@ const HomeProduct = () => {
   return (
     <div className="home-product-container">
       {/* Background Image */}
-      <div className="product-background">
-        <img src={homeProductsBg} alt="Products Background" className="background-image" />
-      </div>
+      
       
       {/* Content Overlay */}
       <div className="product-content">

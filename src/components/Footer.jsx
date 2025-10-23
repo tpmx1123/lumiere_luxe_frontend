@@ -35,15 +35,12 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-main">
             <div className="logo-container">
-              <img 
-                src={footerLogo} 
-                alt="Logo" 
-                className="footer-logo"
-              />
-              <div className="logo-content">
-                <p className="lumiere-text">
-                  Step into Lumiere and experience the transformative power of true luxury. Where science meets style, and every visit feels like renewal. Your radiant journey awaits.
-                </p>
+              <div className="logo-section">
+                <img 
+                  src={footerLogo} 
+                  alt="Logo" 
+                  className="footer-logo"
+                />
                 <div className="social-icons">
                   <button 
                     onClick={() => handleSocialClick('Facebook')} 
@@ -69,6 +66,12 @@ const Footer = () => {
                     <img src={youtubeIcon} alt="YouTube" className="social-icon-img" />
                   </button>
                 </div>
+              </div>
+              <div className="logo-content">
+                <p className="lumiere-text">
+                  At Lumiere Luxe, we believe hair is more than style  it’s identity. Each strand tells a story of confidence, care, and character. Our experts combine artistry with advanced hair science to craft looks that are timeless, healthy, 
+and entirely you.
+                </p>
               </div>
             </div>
             

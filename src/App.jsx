@@ -1,24 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
-import Home from './components/Home.jsx';
-import HomeAbout from './components/HomeAbout.jsx';
-import HomeServices from './components/HomeServices.jsx';
-import HomeJourney from './components/HomeJourney';
-import Footer from './components/Footer.jsx';
+import HomePage from './pages/HomePage.jsx';
+import HairServicePage from './pages/HairServicePage.jsx';
+import NailServicePage from './pages/NailServicePage.jsx';
+import SkinBodyServicePage from './pages/SkinBodyServicePage.jsx';
 import './App.css';
-import HomeProduct from './components/HomeProduct.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <HomeAbout />
-      <HomeServices />
-      <HomeJourney />
-      <HomeProduct />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/hair-service" element={<HairServicePage />} />
+          <Route path="/nail-service" element={<NailServicePage />} />
+          <Route path="/skin-body-service" element={<SkinBodyServicePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,238 @@
+/* Hair Extensions Section Styles - Matching HairTreatment Layout */
+.hair-extensions-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px;
+  background: #FFFFFF;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .hair-extensions-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px;
+    gap: 0px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+.hair-extensions-content {
+  flex: 0 1 430px;
+  max-width: 430px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 40px;
+}
+
+@media (min-width: 1024px) {
+  .hair-extensions-content {
+    text-align: center;
+    padding-right: 20px;
+  }
+}
+
+.hair-extensions-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.1rem;
+  font-weight: 300;
+  color: #906B3A;
+  margin-bottom: 30px;
+  line-height: 1.1;
+  letter-spacing: 0px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .hair-extensions-title {
+    font-size: 2.5rem;
+  }
+}
+
+.hair-extensions-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 300;
+  color: #604a31;
+  font-family:'inter';
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.hair-extensions-includes {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #604a31;
+  font-family:'inter';
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.hair-extensions-includes strong {
+  font-weight: 600;
+  color: #604a31;
+  font-family:'inter';
+}
+
+.scissors-icon {
+  width: 40px;
+  height: 40px;
+  margin: -10px 0 0 0;
+  display: block;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.scissors-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hair-extensions-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+  align-items: center;
+  position: relative;
+  margin: 0 80px 0 0px;
+}
+
+@media (min-width: 1024px) {
+  .hair-extensions-images {
+    flex-direction: row;
+    max-width: 700px;
+    align-items: stretch;
+    gap: 15px;
+  }
+}
+
+.hair-extensions-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+}
+
+.hair-extensions-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1024px) {
+  .hair-extensions-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    flex: 1;
+  }
+  
+  /* Remove staggered effect */
+  .hair-extensions-image:nth-child(2) {
+    margin-top: 0;
+  }
+  
+  .hair-extensions-image:nth-child(3) {
+    margin-top: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .hair-extensions-section {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  
+  .hair-extensions-content {
+    margin: 0 20px;
+    max-width: 100%;
+  }
+  
+  .hair-extensions-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hair-extensions-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .hair-extensions-includes {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+  
+  .hair-extensions-images {
+    margin: 0 20px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hair-extensions-section {
+    padding: 50px 15px;
+    gap: 30px;
+  }
+  
+  .hair-extensions-title {
+    font-size: 2.2rem;
+  }
+  
+  .hair-extensions-content {
+    margin: 0 15px;
+  }
+  
+  .scissors-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hair-extensions-section {
+    padding: 40px 10px;
+    gap: 25px;
+  }
+  
+  .hair-extensions-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .hair-extensions-description {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .hair-extensions-includes {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .hair-extensions-images {
+    margin: 0 10px;
+    gap: 12px;
+  }
+  
+  .scissors-icon {
+    width: 30px;
+    height: 30px;
+  }
+}

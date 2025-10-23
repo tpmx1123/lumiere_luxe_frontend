@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import luxeLogo from '../assets/luxe-logo.png';
 
@@ -32,7 +33,7 @@ const Navbar = () => {
         <div className="navbar-right desktop-menu">
           <ul className="navbar-menu">
             <li className="navbar-item">
-              <a href="#home" className="navbar-link">Home</a>
+              <Link to="/" className="navbar-link">Home</Link>
             </li>
             
             <li className="navbar-item dropdown">
@@ -51,9 +52,9 @@ const Navbar = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <a href="#service1" className="dropdown-item">Service 1</a>
-                  <a href="#service2" className="dropdown-item">Service 2</a>
-                  <a href="#service3" className="dropdown-item">Service 3</a>
+                  <Link to="/hair-service" className="dropdown-item">Hair Service</Link>
+                  <Link to="/nail-service" className="dropdown-item">Nail Service</Link>
+                  <Link to="/skin-body-service" className="dropdown-item">Skin & Body Service</Link>
                 </div>
               )}
             </li>
@@ -99,11 +100,16 @@ const Navbar = () => {
             
             <ul className="mobile-menu-list">
               <li className="mobile-menu-item">
-                <a href="#home" className="mobile-menu-link" onClick={closeMobileMenu}>Home</a>
+                <Link to="/" className="mobile-menu-link" onClick={closeMobileMenu}>Home</Link>
               </li>
               
               <li className="mobile-menu-item">
-                <a href="#services" className="mobile-menu-link" onClick={closeMobileMenu}>Services</a>
+                <span className="mobile-menu-link">Services</span>
+                <ul className="mobile-submenu">
+                  <li><Link to="/hair-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Hair Service</Link></li>
+                  <li><Link to="/nail-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Nail Service</Link></li>
+                  <li><Link to="/skin-body-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Skin & Body Service</Link></li>
+                </ul>
               </li>
               
               <li className="mobile-menu-item">
