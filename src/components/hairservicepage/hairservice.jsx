@@ -1,12 +1,6 @@
 import React from 'react';
 import './hairservice1.css';
 
-// Import images from assets
-import hair1 from '../../assets/hair1.png';
-import hair2 from '../../assets/hair2.png';
-import hair3 from '../../assets/hair3.png';
-import scissors from '../../assets/scissors.png';
-
 // Import SVG images
 import flowers from '../../assets/flowers.svg';
 import vectorBrush from '../../assets/Vector brush.svg';
