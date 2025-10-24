@@ -1,0 +1,162 @@
+/* Facials Page Styles */
+.facials-page {
+    font-family: 'Inter', sans-serif;
+    color: #2C2521;
+    line-height: 1.6;
+    background-color: #FFFFFF;
+  }
+  
+  /* Content Section */
+  .facials-content {
+    padding: 20px 0;
+  }
+  
+  .facials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-items: start;
+  }
+  
+  .facials-text {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: -20px;
+  }
+  
+  .facials-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    color: #906b3a;
+    margin: 0 0 20px 0;
+    padding: 2px;
+    font-weight: 400;
+    line-height: 1.1;
+    white-space: nowrap;
+    letter-spacing: -0.5px;
+    margin-left: -13px;
+  }
+  
+  /* Glow Text Styling */
+  .glow-text {
+    color: #604a31;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    margin-left: -10px;
+    width: 100%;
+  }
+  
+  .glow-text-includes {
+    color: #604a31;
+    font-family: 'Inter', sans-serif;
+    font-weight: 340;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    margin-left: -10px;
+  }
+  
+  /* Images Section */
+  .facials-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: -20px;
+  }
+  
+  .image-container {
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 330px;
+    min-width: 320px;
+    margin-left: -20px;
+  }
+  
+  .image-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .facials-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .image-container:hover .facials-img {
+    transform: scale(1.05);
+  }
+  
+  .scissors-container {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .scissors-image {
+    height: 50px;
+    width: auto;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-left: -10px;
+  }
+  
+  .scissors-image:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .facials-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .facials-text {
+      margin-bottom: 40px;
+      text-align: center;
+      margin-left: 0;
+    }
+    
+    .facials-text h2 {
+      white-space: normal;
+      text-align: center;
+      margin-left: 0;
+    }
+    
+    .glow-text,
+    .glow-text-includes {
+      text-align: center;
+      margin-left: 0;
+    }
+    
+    .facials-images {
+      margin: 0 auto;
+      gap: 20px;
+    }
+    
+    .image-container {
+      height: 280px;
+      min-width: 280px;
+      margin: 0 auto;
+    }
+    
+    .scissors-container {
+      text-align: center;
+    }
+    
+    .scissors-image {
+      margin-left: 0;
+    }
+  }

@@ -1,0 +1,133 @@
+/* Skin Page Styles */
+.skin-page {
+  background-color: #F4F1EC;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+ 
+  background: #F5F3EE;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+}
+
+.skin-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../assets/flowers.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1.0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.skin-page::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  width: 200px;
+  height: 190px;
+  background-image: url('../../assets/Vector\ brush.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.skin-content {
+  padding: 0 0 20px; /* Removed top padding to move content up */
+  position: relative;
+  z-index: 2;
+  min-height: 100vh; /* Ensure content takes full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.skin-bottom-image {
+  position: absolute;
+  bottom: -375px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  
+}
+
+.skin-bottom-image img {
+  max-width: 750px;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.skin-page h1 {
+  font-family: 'Playfair Display', serif;
+  color: #906B3A;
+  font-size: 4.5rem;
+  margin: 0 0 5px 0;
+  text-align: center;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+
+
+.skin-page .description {
+  font-family: 'Inter', sans-serif;
+  color: #604a31;
+  font-size: 1.2rem; /* Adjust this value to change the size */
+  text-align: center;
+  max-width: 1000px; /* Reduced from 1200px */
+  margin: 5px auto 20px;
+  line-height: 1.6; /* Improved line height for better readability */
+  font-weight: 400;
+  padding: 0 20px;
+  /* Adding a subtle background for better visibility */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+  display: inline-block;
+}
+
+.skin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skin-page h1 {
+    font-size: 2.5rem;
+  }
+  
+  .skin-content {
+    padding: 60px 0;
+  }
+}

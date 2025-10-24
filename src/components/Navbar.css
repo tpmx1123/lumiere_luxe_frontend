@@ -112,7 +112,15 @@
 .mobile-menu-button {
   display: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  background-color: rgba(131, 104, 58, 0.1);
 }
 
 .hamburger {
@@ -151,48 +159,68 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 9999;
   display: flex;
   justify-content: flex-end;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .mobile-menu {
-  width: 300px;
+  width: 320px;
   height: 100%;
   background-color: #fff;
-  padding: 20px;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
 
 .mobile-menu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 0;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fafafa;
 }
 
 .mobile-logo {
-  height: 40px;
+  height: 45px;
   width: auto;
 }
 
 .close-button {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 28px;
   color: #83683A;
   cursor: pointer;
-  padding: 5px;
-  transition: color 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-button:hover {
   color: #6B4F2A;
+  background-color: rgba(131, 104, 58, 0.1);
 }
 
 .mobile-menu-list {
@@ -201,12 +229,16 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .mobile-menu-item {
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 15px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.mobile-menu-item:last-child {
+  border-bottom: none;
 }
 
 .mobile-menu-link {
@@ -214,21 +246,70 @@
   color: #83683A;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 18px;
-  transition: color 0.3s ease;
-  display: block;
-  padding: 10px 0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  position: relative;
 }
 
 .mobile-menu-link:hover {
   color: #6B4F2A;
+  background-color: #f8f8f8;
+}
+
+.mobile-dropdown-trigger {
+  cursor: pointer;
+}
+
+.mobile-dropdown-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fafafa;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-submenu {
+  max-height: 200px;
+}
+
+.mobile-submenu-link {
+  display: block;
+  padding: 14px 24px 14px 48px;
+  text-decoration: none;
+  color: #83683A;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.mobile-submenu-link:hover {
+  color: #6B4F2A;
+  background-color: #f0f0f0;
+  border-left-color: #83683A;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .navbar-container {
     padding: 0 20px;
-    height: 60px;
+    height: 65px;
   }
   
   .desktop-menu {
@@ -240,13 +321,14 @@
   }
   
   .navbar-logo {
-    height: 40px;
+    height: 45px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 0 15px;
+    padding: 0 16px;
+    height: 60px;
   }
   
   .mobile-menu {
@@ -254,6 +336,20 @@
   }
   
   .navbar-logo {
-    height: 35px;
+    height: 40px;
+  }
+  
+  .mobile-menu-header {
+    padding: 16px 20px;
+  }
+  
+  .mobile-menu-link {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+  
+  .mobile-submenu-link {
+    padding: 12px 20px 12px 40px;
+    font-size: 13px;
   }
 }

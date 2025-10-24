@@ -6,7 +6,7 @@ import luxeLogo from '../assets/luxe-logo.png';
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,6 +15,11 @@ const Navbar = () => {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
     setIsServicesOpen(false);
+    setIsMobileDropdownOpen(false);
+  };
+
+  const toggleMobileDropdown = () => {
+    setIsMobileDropdownOpen(!isMobileDropdownOpen);
   };
 
   return (
@@ -55,6 +60,7 @@ const Navbar = () => {
                   <Link to="/hair-service" className="dropdown-item">Hair Service</Link>
                   <Link to="/nail-service" className="dropdown-item">Nail Service</Link>
                   <Link to="/skin-body-service" className="dropdown-item">Skin & Body Service</Link>
+                  <Link to="/makeup-page" className="dropdown-item">Makeup Page</Link>
                 </div>
               )}
             </li>
@@ -74,13 +80,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="mobile-menu-button" onClick={toggleMobileMenu}>
+        <button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
           <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
             <span></span>
             <span></span>
             <span></span>
           </div>
-        </div>
+        </button>
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -100,28 +106,40 @@ const Navbar = () => {
             
             <ul className="mobile-menu-list">
               <li className="mobile-menu-item">
-                <Link to="/" className="mobile-menu-link" onClick={closeMobileMenu}>Home</Link>
+                <Link to="/" className="mobile-menu-link" onClick={closeMobileMenu}>
+                  <span>Home</span>
+                </Link>
               </li>
               
-              <li className="mobile-menu-item">
-                <span className="mobile-menu-link">Services</span>
+              <li className={`mobile-menu-item mobile-dropdown ${isMobileDropdownOpen ? 'active' : ''}`}>
+                <div className="mobile-menu-link mobile-dropdown-trigger" onClick={toggleMobileDropdown}>
+                  <span>Services</span>
+                  <span className="mobile-dropdown-arrow">▼</span>
+                </div>
                 <ul className="mobile-submenu">
                   <li><Link to="/hair-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Hair Service</Link></li>
                   <li><Link to="/nail-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Nail Service</Link></li>
                   <li><Link to="/skin-body-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Skin & Body Service</Link></li>
+                  <li><Link to="/makeup-page" className="mobile-submenu-link" onClick={closeMobileMenu}>Makeup Page</Link></li>
                 </ul>
               </li>
               
               <li className="mobile-menu-item">
-                <a href="#about" className="mobile-menu-link" onClick={closeMobileMenu}>About us</a>
+                <a href="#about" className="mobile-menu-link" onClick={closeMobileMenu}>
+                  <span>About us</span>
+                </a>
               </li>
               
               <li className="mobile-menu-item">
-                <a href="#blog" className="mobile-menu-link" onClick={closeMobileMenu}>Blog</a>
+                <a href="#blog" className="mobile-menu-link" onClick={closeMobileMenu}>
+                  <span>Blog</span>
+                </a>
               </li>
               
               <li className="mobile-menu-item">
-                <a href="#contact" className="mobile-menu-link" onClick={closeMobileMenu}>Contact us</a>
+                <a href="#contact" className="mobile-menu-link" onClick={closeMobileMenu}>
+                  <span>Contact us</span>
+                </a>
               </li>
             </ul>
           </div>

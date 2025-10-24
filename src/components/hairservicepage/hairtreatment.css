@@ -123,23 +123,21 @@
 .hair-treatment-image {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   max-width: 100%;
 }
 
 .hair-treatment-image:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 1024px) {
   .hair-treatment-image {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
     flex: 1;
   }
   
@@ -154,86 +152,52 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
   .hair-treatment-section {
-    padding: 60px 20px;
-    gap: 40px;
+    padding: 40px 20px;
+    gap: 0;
+    flex-direction: column;
   }
   
   .hair-treatment-content {
-    margin: 0 20px;
+    order: 1;
+    margin: 0;
+    padding: 0 20px;
     max-width: 100%;
   }
   
+  .hair-treatment-images {
+    order: 2;
+    flex-direction: row;
+    gap: 10px;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  
+  .hair-treatment-image {
+    height: 200px;
+    width: calc(33.33% - 6.67px);
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+  
   .hair-treatment-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-align: center;
   }
   
   .hair-treatment-description {
     font-size: 1rem;
     margin-bottom: 20px;
-  }
-  
-  .hair-treatment-includes {
-    font-size: 0.95rem;
-    margin-bottom: 25px;
-  }
-  
-  .hair-treatment-images {
-    margin: 0 20px;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hair-treatment-section {
-    padding: 50px 15px;
-    gap: 30px;
-  }
-  
-  .hair-treatment-title {
-    font-size: 2.2rem;
-  }
-  
-  .hair-treatment-content {
-    margin: 0 15px;
-  }
-  
-  .scissors-icon {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hair-treatment-section {
-    padding: 40px 10px;
-    gap: 25px;
-  }
-  
-  .hair-treatment-title {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-  
-  .hair-treatment-description {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
+    text-align: center;
   }
   
   .hair-treatment-includes {
     font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
-  
-  .hair-treatment-images {
-    margin: 0 10px;
-    gap: 12px;
-  }
-  
-  .scissors-icon {
-    width: 30px;
-    height: 30px;
+    margin-bottom: 25px;
+    text-align: center;
   }
 }

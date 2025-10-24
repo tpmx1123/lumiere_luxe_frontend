@@ -1,0 +1,271 @@
+/* Bridal & Groom Makeup Section Styles */
+.bridal-groom-makeup-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  background-color: #fdfdfd;
+  gap: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .bridal-groom-makeup-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    max-width: 1200px;
+  }
+}
+
+/* Images Section - Left Side */
+.bridal-groom-makeup-images {
+  flex: 1 1 55%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  max-width: 60%;
+  padding: 0;
+  margin: 0;
+  order: 1;
+}
+
+.bridal-groom-makeup-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  filter: brightness(0.98);
+}
+
+.bridal-groom-makeup-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+  .bridal-groom-makeup-images {
+    max-width: 700px;
+    height: 380px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bridal-groom-makeup-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .bridal-groom-makeup-content {
+    padding: 0 0 0 10px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .bridal-groom-makeup-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 20px;
+  }
+  
+  .bridal-groom-makeup-images {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 0 20px;
+    gap: 15px;
+  }
+  
+  .bridal-groom-makeup-image {
+    height: 250px;
+    max-width: 100%;
+  }
+  
+  .bridal-groom-makeup-content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    flex: 0 1 500px;
+  }
+  
+  .bridal-groom-makeup-title,
+  .bridal-groom-makeup-description,
+  .bridal-groom-makeup-includes {
+    text-align: left;
+  }
+  
+  .bridal-groom-makeup-cta {
+    align-self: left;
+  }
+}
+
+/* Content Section - Right Side */
+.bridal-groom-makeup-content {
+  flex: 0 1 500px;
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 0;
+  order: 2;
+}
+
+@media (min-width: 1024px) {
+  .bridal-groom-makeup-content {
+    text-align: left;
+    padding-left: 0px;
+    order: 2;
+  }
+}
+
+.bridal-groom-makeup-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #906B3A;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  text-align: left;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  
+}
+
+@media (max-width: 1024px) {
+  .bridal-groom-makeup-title {
+    font-size: 3.1rem;
+    white-space: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+  }
+}
+
+.bridal-groom-makeup-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0 0 15px;
+  font-weight: 300;
+  color: #604a31;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  max-width: 100%;
+  letter-spacing: 0.2px;
+}
+
+.bridal-groom-makeup-includes {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #604a31;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.bridal-groom-makeup-includes strong {
+  font-weight: 600;
+  color: #604a31;
+}
+
+/* CTA Button */
+.bridal-groom-makeup-cta {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  overflow: hidden;
+  align-self: flex-start;
+  box-shadow: none;
+}
+
+.bridal-groom-makeup-cta:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+.bridal-groom-makeup-cta:active {
+  transform: scale(0.98);
+}
+
+.button-icon {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bridal-groom-makeup-section {
+    padding: 50px 20px;
+    gap: 30px;
+  }
+  
+  .bridal-groom-makeup-images {
+    order: 2;
+    padding: 0 20px;
+  }
+  
+  .bridal-groom-makeup-content {
+    order: 1;
+    margin: 0;
+    padding: 0 20px;
+  }
+  
+  .bridal-groom-makeup-image {
+    height: 250px;
+    max-width: 100%;
+  }
+  
+  .bridal-groom-makeup-title {
+    font-size: 2.8rem;
+    text-align: left;
+  }
+  
+  .bridal-groom-makeup-description,
+  .bridal-groom-makeup-includes {
+    text-align: left;
+  }
+  
+  .bridal-groom-makeup-cta {
+    align-self: left;
+  }
+
+  .bridal-groom-makeup-description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  
+  .bridal-groom-makeup-includes {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .bridal-groom-makeup-images {
+    gap: 15px;
+  }
+  
+  .bridal-groom-makeup-cta {
+    width: 45px;
+    height: 45px;
+  }
+}

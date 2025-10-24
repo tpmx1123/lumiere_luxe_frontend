@@ -1,0 +1,133 @@
+/* Service Collection Section Styles */
+.service-collection-section {
+  background-color: #f5f5f0;
+  padding: 40px 0;
+  margin: 0;
+  position: relative;
+}
+
+
+
+
+.service-collection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.service-collection-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #8b7355;
+  margin: 0 0 40px 0;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.service-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #8b7355;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.service-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #fafafa;
+}
+
+.service-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .service-collection-container {
+    padding: 0 30px;
+  }
+  
+  .service-collection-title {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+  }
+  
+  .service-buttons-container {
+    gap: 15px;
+  }
+  
+  .service-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  
+  
+  
+  .service-collection-container {
+    padding: 0 20px;
+  }
+  
+  .service-collection-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    line-height: 1.3;
+  }
+  
+  .service-buttons-container {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .service-button {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  
+  
+  
+  .service-collection-container {
+    padding: 0 15px;
+  }
+  
+  .service-collection-title {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+  }
+  
+  .service-button {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
+}

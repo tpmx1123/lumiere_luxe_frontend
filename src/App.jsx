@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage.jsx';
 import HairServicePage from './pages/HairServicePage.jsx';
 import NailServicePage from './pages/NailServicePage.jsx';
 import SkinBodyServicePage from './pages/SkinBodyServicePage.jsx';
+import MakeupPage from './pages/makeuppage.jsx';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/hair-service" element={<HairServicePage />} />
           <Route path="/nail-service" element={<NailServicePage />} />
           <Route path="/skin-body-service" element={<SkinBodyServicePage />} />
+          <Route path="/makeup-page" element={<MakeupPage />} />
         </Routes>
       </div>
     </Router>
