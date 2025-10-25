@@ -1,0 +1,181 @@
+/* Nail Art Page Styles */
+.nailart-page {
+  font-family: 'Inter', sans-serif;
+  color: #2C2521;
+  line-height: 1.6;
+  background-color: #FFFFFF;
+}
+
+/* Content Section */
+.nailart-content {
+  padding: 30px 0 20px;
+}
+
+.nailart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-items: start;
+}
+
+.nailart-text {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: -20px;
+}
+
+.nailart-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.9rem;
+  color: #906b3a;
+  margin: 0 0 20px 0;
+  padding: 2px;
+  font-weight: 400;
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+  margin-left: -13px;
+}
+
+/* Glow Text Styling */
+.glow-text {
+  color: #604a31;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-left: -10px;
+  width: 100%;
+}
+
+.glow-text-includes {
+  color: #604a31;
+  font-family: 'Inter', sans-serif;
+  font-weight: 340;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-left: -15px;
+}
+
+/* Images Section */
+.nailart-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: -20px;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 330px;
+  min-width: 320px;
+  margin-left: -20px;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+}
+
+.nailart-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover .nailart-img {
+  transform: scale(1.05);
+}
+
+.scissors-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.scissors-image {
+  height: 50px;
+  width: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-left: -10px;
+}
+
+.scissors-image:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nailart-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+  
+  .nailart-text {
+    order: 1;
+    margin-bottom: 0;
+    text-align: left;
+    margin-left: 0;
+    max-width: 100%;
+  }
+  
+  .nailart-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-align: left;
+    white-space: normal;
+    margin-left: 0;
+  }
+  
+  .glow-text,
+  .glow-text-includes {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .nailart-images {
+    order: 2;
+    flex-direction: row;
+    gap: 10px;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    grid-template-columns: none;
+    display: flex;
+  }
+  
+  .image-container {
+    height: 200px;
+    width: calc(50% - 5px);
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin: 0;
+    min-width: auto;
+  }
+  
+  .scissors-container {
+    text-align: left;
+    margin-top: 25px;
+  }
+  
+  .scissors-image {
+    margin-left: 0;
+  }
+}

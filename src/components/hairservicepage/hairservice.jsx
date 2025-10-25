@@ -2,7 +2,7 @@ import React from 'react';
 import './hairservice1.css';
 
 // Import SVG images
-import flowers from '../../assets/flowers.svg';
+import flowers from '../../assets/flowers.png';
 import vectorBrush from '../../assets/Vector brush.svg';
 import hairservicestools from '../../assets/hair services tools.svg';
 

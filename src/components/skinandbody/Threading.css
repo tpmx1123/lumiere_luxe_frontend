@@ -15,7 +15,7 @@
     max-width: 1200px;
     margin: 0 auto 40px;
     padding: 0 20px;
-    text-align: center;
+    text-align: left;
     color: #906b3a;
     font-size: 1.3rem;
     line-height: 1.6;
@@ -34,7 +34,7 @@
     margin: 0 auto;
     padding: 0 20px;
     justify-items: start;
-    align-items: center;
+    align-items: left;
     margin-left: -40px;
   }
   
@@ -151,35 +151,62 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     .threading-grid {
       grid-template-columns: 1fr;
-      gap: 30px;
-      padding: 0 15px;
+      gap: 0;
+      padding: 40px 20px;
+      flex-direction: column;
       margin-left: 0;
     }
     
     .threading-text {
-      text-align: center;
+      order: 1;
+      text-align: left;
       padding: 0 10px;
       margin-left: 0;
+      max-width: 100%;
+    }
+    
+    .threading-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      text-align: left;
+      white-space: normal;
+    }
+    
+    .threading-text p,
+    .threading-glow-text,
+    .threading-includes {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      text-align: left;
     }
     
     .threading-images {
+      order: 2;
+      flex-direction: row;
+      gap: 10px;
+      overflow: visible;
+      padding: 0;
+      margin: 0;
       max-width: 100%;
-      margin: 0 auto;
-      gap: 20px;
+      grid-template-columns: none;
+      display: flex;
       margin-left: 0;
     }
     
     .threading-image-container {
-      width: 100%;
-      max-width: 100%;
-      height: 280px;
+      height: 200px;
+      width: calc(50% - 5px);
+      flex-shrink: 0;
+      border-radius: 10px;
+      margin: 0;
     }
     
     .threading-scissors-container {
-      text-align: center;
+      text-align: left;
+      margin-top: 25px;
     }
     
     .threading-scissors-image {

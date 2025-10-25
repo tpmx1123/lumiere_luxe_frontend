@@ -117,43 +117,62 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     .facials-grid {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 0;
+      padding: 40px 20px;
+      flex-direction: column;
     }
     
     .facials-text {
-      margin-bottom: 40px;
-      text-align: center;
+      order: 1;
+      margin-bottom: 0;
+      text-align: left;
       margin-left: 0;
+      max-width: 100%;
     }
     
     .facials-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      text-align: left;
       white-space: normal;
-      text-align: center;
       margin-left: 0;
     }
     
     .glow-text,
     .glow-text-includes {
-      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      text-align: left;
       margin-left: 0;
     }
     
     .facials-images {
-      margin: 0 auto;
-      gap: 20px;
+      order: 2;
+      flex-direction: row;
+      gap: 10px;
+      overflow: visible;
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+      grid-template-columns: none;
+      display: flex;
     }
     
     .image-container {
-      height: 280px;
-      min-width: 280px;
-      margin: 0 auto;
+      height: 200px;
+      width: calc(50% - 5px);
+      flex-shrink: 0;
+      border-radius: 10px;
+      margin: 0;
+      min-width: auto;
     }
     
     .scissors-container {
-      text-align: center;
+      text-align: left;
+      margin-top: 25px;
     }
     
     .scissors-image {

@@ -384,6 +384,7 @@
   z-index: 10;
   opacity: 0.9;
   transform: rotate(0deg);
+  max-width: 100%;
 }
 
 .flowers-background {
@@ -396,6 +397,7 @@
   z-index: 1;
   opacity: 0.9;
   mix-blend-mode: multiply;
+  max-width: 100%;
 }
 
 .hair-service-tools {
@@ -416,6 +418,12 @@
   .vector-brush {
     width: 150px;
     left: 30px;
+    top: 40px;
+  }
+  
+  .flowers-background {
+    top: 60px;
+    opacity: 0.8;
   }
   
   .hair-service-tools {
@@ -432,19 +440,16 @@
     top: 20px;
   }
   
+  .flowers-background {
+    top: 50px;
+    opacity: 0.6;
+    height: 80%;
+  }
+  
   .hair-service-tools {
     width: 400px;
     margin: -30px auto 0;
     margin-bottom: -20px;
-  }
-  
-  .flowers-background {
-    opacity: 0.6;
-    background-image: url('../../assets/flowers.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
   }
 }
 
@@ -453,6 +458,12 @@
     width: 80px;
     left: 15px;
     top: 15px;
+  }
+  
+  .flowers-background {
+    top: 40px;
+    opacity: 0.4;
+    height: 70%;
   }
   
   .hair-service-tools {
@@ -465,13 +476,44 @@
     padding-top: 10px;
     font-size: 1.1rem;
   }
+}
+
+/* Additional responsive breakpoints for better mobile experience */
+@media (max-width: 360px) {
+  .vector-brush {
+    width: 60px;
+    left: 10px;
+    top: 10px;
+  }
   
   .flowers-background {
-    opacity: 0.4;
-    background-image: url('../../assets/flowers.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
+    top: 30px;
+    opacity: 0.3;
+    height: 60%;
+  }
+  
+  .hair-service-tools {
+    width: 250px;
+    margin: -15px auto 0;
+    margin-bottom: -5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .vector-brush {
+    width: 50px;
+    left: 5px;
+    top: 5px;
+  }
+  
+  .flowers-background {
+    top: 25px;
+    opacity: 0.2;
+    height: 50%;
+  }
+  
+  .hair-service-tools {
+    width: 200px;
+    margin: -10px auto 0;
   }
 }
