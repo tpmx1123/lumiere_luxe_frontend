@@ -27,11 +27,13 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Left side - Logo */}
         <div className="navbar-left">
-          <img 
-            src={luxeLogo} 
-            alt="Luxe Logo" 
-            className="navbar-logo"
-          />
+          <Link to="/" className="logo-link">
+            <img 
+              src={luxeLogo} 
+              alt="Luxe Logo" 
+              className="navbar-logo"
+            />
+          </Link>
         </div>
 
         {/* Desktop Navigation Menu */}
@@ -90,11 +92,13 @@ const Navbar = () => {
         <div className="mobile-menu-overlay">
           <div className="mobile-menu">
             <div className="mobile-menu-header">
-              <img 
-                src={luxeLogo} 
-                alt="Luxe Logo" 
-                className="mobile-logo"
-              />
+              <Link to="/" className="mobile-logo-link" onClick={closeMobileMenu}>
+                <img 
+                  src={luxeLogo} 
+                  alt="Luxe Logo" 
+                  className="mobile-logo"
+                />
+              </Link>
               <button className="close-button" onClick={closeMobileMenu}>
                 ✕
               </button>
