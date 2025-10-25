@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomeAbout.css';
 import salonImage from '../assets/homeabout.png';
-import homeAboutBg from '../assets/homeaboutbg.png';
+
 const HomeSection2 = () => {
   return (
     <div className="home-section2">
