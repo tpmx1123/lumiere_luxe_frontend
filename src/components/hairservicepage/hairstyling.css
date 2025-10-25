@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 40px;
+  padding: 40px 40px;
   background: linear-gradient(90deg, #FFFFFF 0%, #F4F1EC 100%);
-  gap: 80px;
+  gap: 50px;
 }
 
 @media (min-width: 1024px) {
@@ -68,21 +68,20 @@
 }
 
 .hair-styling-includes {
-  font-family: 'inter';
+  font-family: "inter";
   font-size: 1rem;
-  color: #604a31;
-  font-family:'inter';
-  margin-bottom: 20px;
-  font-weight: 300;
-  align-items: left;
+  color: #604A31;
+  margin-bottom: 30px;
   line-height: 1.6;
+  text-align: left;
+  font-weight: 300;
 }
 
 .hair-styling-includes strong {
   font-weight: 600;
   color: #604A31;
   font-family:'inter';
-  text-align: left;
+  
 }
 
 .scissors-icon {
@@ -124,7 +123,7 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 25px;
   transition: transform 0.3s ease;
   max-width: 100%;
 }
@@ -154,7 +153,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hair-styling-section {
-    padding: 40px 20px;
+    padding: 20px 20px;
     gap: 0;
     flex-direction: column;
   }

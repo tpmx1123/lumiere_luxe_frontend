@@ -6,6 +6,8 @@ import HairServicePage from './pages/HairServicePage.jsx';
 import NailServicePage from './pages/NailServicePage.jsx';
 import SkinBodyServicePage from './pages/SkinBodyServicePage.jsx';
 import MakeupPage from './pages/makeuppage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+import BlogPage from './pages/BlogPage.jsx';
 import './App.css';
 
 function App() {
@@ -15,10 +17,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/hair-service" element={<HairServicePage />} />
-          <Route path="/nail-service" element={<NailServicePage />} />
-          <Route path="/skin-body-service" element={<SkinBodyServicePage />} />
-          <Route path="/makeup-page" element={<MakeupPage />} />
+          <Route path="/hair-service-in-madhapur" element={<HairServicePage />} />
+          <Route path="/nail-service-in-madhapur" element={<NailServicePage />} />
+          <Route path="/skin-body-service-in-madhapur" element={<SkinBodyServicePage />} />
+          <Route path="/makeup-page-in-madhapur" element={<MakeupPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
       </div>
     </Router>

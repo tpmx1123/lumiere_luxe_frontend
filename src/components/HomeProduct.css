@@ -26,13 +26,12 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  
   width: 100%;
   margin: 0px;
 }
 
 .product-text {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .product-title {
@@ -63,7 +62,6 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 0;
   overflow: visible;
 }
 

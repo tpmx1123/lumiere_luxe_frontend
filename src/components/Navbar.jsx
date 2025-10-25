@@ -57,24 +57,20 @@ const Navbar = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <Link to="/hair-service" className="dropdown-item">Hair Service</Link>
-                  <Link to="/nail-service" className="dropdown-item">Nail Service</Link>
-                  <Link to="/skin-body-service" className="dropdown-item">Skin & Body Service</Link>
-                  <Link to="/makeup-page" className="dropdown-item">Makeup Page</Link>
+                  <Link to="/hair-service-in-madhapur" className="dropdown-item">Hair Service</Link>
+                  <Link to="/nail-service-in-madhapur" className="dropdown-item">Nail Service</Link>
+                  <Link to="/skin-body-service-in-madhapur" className="dropdown-item">Skin & Body Service</Link>
+                  <Link to="/makeup-page-in-madhapur" className="dropdown-item">Makeup Page</Link>
                 </div>
               )}
             </li>
             
             <li className="navbar-item">
-              <a href="#about" className="navbar-link">About us</a>
+              <Link to="/blog" className="navbar-link">Blog</Link>
             </li>
             
             <li className="navbar-item">
-              <a href="#blog" className="navbar-link">Blog</a>
-            </li>
-            
-            <li className="navbar-item">
-              <a href="#contact" className="navbar-link">Contact us</a>
+              <Link to="/contact" className="navbar-link">Contact us</Link>
             </li>
           </ul>
         </div>
@@ -117,29 +113,23 @@ const Navbar = () => {
                   <span className="mobile-dropdown-arrow">▼</span>
                 </div>
                 <ul className="mobile-submenu">
-                  <li><Link to="/hair-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Hair Service</Link></li>
-                  <li><Link to="/nail-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Nail Service</Link></li>
-                  <li><Link to="/skin-body-service" className="mobile-submenu-link" onClick={closeMobileMenu}>Skin & Body Service</Link></li>
-                  <li><Link to="/makeup-page" className="mobile-submenu-link" onClick={closeMobileMenu}>Makeup Page</Link></li>
+                  <li><Link to="/hair-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Hair Service</Link></li>
+                  <li><Link to="/nail-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Nail Service</Link></li>
+                  <li><Link to="/skin-body-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Skin & Body Service</Link></li>
+                  <li><Link to="/makeup-page-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Makeup Page</Link></li>
                 </ul>
               </li>
               
               <li className="mobile-menu-item">
-                <a href="#about" className="mobile-menu-link" onClick={closeMobileMenu}>
-                  <span>About us</span>
-                </a>
-              </li>
-              
-              <li className="mobile-menu-item">
-                <a href="#blog" className="mobile-menu-link" onClick={closeMobileMenu}>
+                <Link to="/blog" className="mobile-menu-link" onClick={closeMobileMenu}>
                   <span>Blog</span>
-                </a>
+                </Link>
               </li>
               
               <li className="mobile-menu-item">
-                <a href="#contact" className="mobile-menu-link" onClick={closeMobileMenu}>
+                <Link to="/contact" className="mobile-menu-link" onClick={closeMobileMenu}>
                   <span>Contact us</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -16,10 +16,9 @@ const HomeSection2 = () => {
         <div 
           className="highlight-section"
           style={{
-            backgroundImage: `url(${homeAboutBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+           
+            background: 'linear-gradient(90deg, #F4F1EC 0%, #FFFFFF 100%)',
+            borderRadius: '10px',
           }}
         >
           <h2>Why Lumiere</h2>

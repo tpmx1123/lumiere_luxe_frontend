@@ -39,7 +39,7 @@ const HomeServices = () => {
   return (
     <div className="home-services-container">
       <div className="services-content">
-        <h2 className="services-title">Our Signature Services</h2>
+        <h2 className="services-titles">Our Services</h2>
         <p className="services-description">
           Every service at Lumiere is a journey toward your most radiant self—crafted with precision, passion, and the world's finest products.
         </p>

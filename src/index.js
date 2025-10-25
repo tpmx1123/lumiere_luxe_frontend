@@ -22,11 +22,11 @@ const addStructuredData = () => {
     "@type": "WebSite",
     "name": "Lumiere Luxe",
     "alternateName": "Sasha Clinics",
-    "url": "https://lumiereluxe.com",
+    "url": "https://lumiereluxe.in",
     "description": "Luxury Salon & Spa offering transformative beauty services in Hyderabad",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://lumiereluxe.com/search?q={search_term_string}",
+      "target": "https://lumiereluxe.in/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   });

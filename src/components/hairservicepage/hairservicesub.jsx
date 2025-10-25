@@ -15,10 +15,12 @@ const HairServiceSub = () => {
         <img src={hair3} alt="Hair Style 3" className="hair-service-sub-image" />
       </div>
       <div className="hair-service-sub-content">
-        <h2 className="hair-service-sub-title">Hair Service</h2>
+        <h2 className="hair-service-sub-title">Hair Cut</h2>
         <p className="hair-service-sub-description">
-          At Lumiere Luxe, we believe hair is more than style — it's identity. Each strand tells a story of confidence, care, and character. 
-          Our experts combine artistry with advanced hair science to craft looks that are timeless, healthy, and entirely you.
+        Precision meets personality. Our stylists take time to understand your features, lifestyle,
+and preferences before sculpting a look that feels naturally you. Whether you want a 
+subtle trim or a statement change, each cut is finished with expert detailing and restorative 
+care to keep your hair strong and radiant.
         </p>
         <p className="hair-service-sub-includes">
           <strong>Includes:</strong> Consultation / Luxury wash / Customized cut & finish

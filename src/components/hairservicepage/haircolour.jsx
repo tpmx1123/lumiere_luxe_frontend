@@ -9,7 +9,7 @@ const HairColor = () => {
   return (
     <div className="hair-color-section">
       <div className="hair-color-content">
-        <h2 className="hair-color-title">HAIR COLOR</h2>
+        <h2 className="hair-color-title">Hair Color</h2>
         <p className="hair-color-description">
           Colour is chemistry, and at Lumiere Luxe, it's perfected through science. From soft Balayage to bold transformations, our 
           experts use globally acclaimed formulations that protect and nourish. Expect dimension, depth, and a flawless finish that complements 

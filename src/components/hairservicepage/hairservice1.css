@@ -416,14 +416,11 @@
 /* Responsive adjustments for SVG elements */
 @media (max-width: 1024px) {
   .vector-brush {
-    width: 150px;
-    left: 30px;
-    top: 40px;
+    display: none;
   }
   
   .flowers-background {
-    top: 60px;
-    opacity: 0.8;
+    display: none;
   }
   
   .hair-service-tools {
@@ -435,19 +432,15 @@
 
 @media (max-width: 768px) {
   .vector-brush {
-    width: 100px;
-    left: 20px;
-    top: 20px;
+    display: none;
   }
   
   .flowers-background {
-    top: 50px;
-    opacity: 0.6;
-    height: 80%;
+    display: none;
   }
   
   .hair-service-tools {
-    width: 400px;
+    width: 450px;
     margin: -30px auto 0;
     margin-bottom: -20px;
   }
@@ -455,19 +448,15 @@
 
 @media (max-width: 480px) {
   .vector-brush {
-    width: 80px;
-    left: 15px;
-    top: 15px;
+    display: none;
   }
   
   .flowers-background {
-    top: 40px;
-    opacity: 0.4;
-    height: 70%;
+    display: none;
   }
   
   .hair-service-tools {
-    width: 300px;
+    width: 350px;
     margin: -20px auto 0;
     margin-bottom: -10px;
   }
@@ -481,15 +470,11 @@
 /* Additional responsive breakpoints for better mobile experience */
 @media (max-width: 360px) {
   .vector-brush {
-    width: 60px;
-    left: 10px;
-    top: 10px;
+    display: none;
   }
   
   .flowers-background {
-    top: 30px;
-    opacity: 0.3;
-    height: 60%;
+    display: none;
   }
   
   .hair-service-tools {
@@ -501,15 +486,11 @@
 
 @media (max-width: 320px) {
   .vector-brush {
-    width: 50px;
-    left: 5px;
-    top: 5px;
+    display: none;
   }
   
   .flowers-background {
-    top: 25px;
-    opacity: 0.2;
-    height: 50%;
+    display: none;
   }
   
   .hair-service-tools {

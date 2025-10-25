@@ -107,11 +107,12 @@
   .skinandbody-content,
   .skinandbody-description {
     font-size: 1rem;
+    margin: 0 auto 50px;
   }
   
   .skinandbody-hero {
-    padding: 15px 0;
-    margin-bottom: 10px;
+    padding: 5px 0;
+    margin-bottom: 0px;
   }
   
   .skinandbody-image {
@@ -140,15 +141,7 @@
     font-size: 2rem;
   }
   
-  .skinandbody-book-now-btn {
-    width: 100%;
-    padding: 12px 20px;
-  }
   
-  .skinandbody-scissors-icon {
-    width: 35px;
-    height: 35px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -175,8 +168,8 @@
   }
   
   .skinandbody-hero {
-    padding: 30px 0 50px;
-    margin-bottom: 30px;
+    padding: 30px 0 0px;
+    margin-bottom: 0px;
   }
   
   .skinandbody-title {
@@ -226,10 +219,7 @@
     font-size: 2rem;
   }
   
-  .skinandbody-book-now-btn {
-    width: 100%;
-    padding: 14px;
-  }
+  
 }
 
 /* SVG Elements Styles */
@@ -272,8 +262,11 @@
 /* Responsive adjustments for SVG elements */
 @media (max-width: 1024px) {
   .skinandbody-vector-brush {
-    width: 150px;
-    left: 30px;
+    display: none;
+  }
+  
+  .skinandbody-flowers-background {
+    display: none;
   }
   
   .skinandbody-service-tools {
@@ -285,9 +278,11 @@
 
 @media (max-width: 768px) {
   .skinandbody-vector-brush {
-    width: 100px;
-    left: 20px;
-    top: 20px;
+    display: none;
+  }
+  
+  .skinandbody-flowers-background {
+    display: none;
   }
   
   .skinandbody-service-tools {
@@ -295,17 +290,15 @@
     margin: -50px auto 0;
     margin-bottom: -15px;
   }
-  
-  .skinandbody-flowers-background {
-    opacity: 0.15;
-  }
 }
 
 @media (max-width: 480px) {
   .skinandbody-vector-brush {
-    width: 80px;
-    left: 15px;
-    top: 15px;
+    display: none;
+  }
+  
+  .skinandbody-flowers-background {
+    display: none;
   }
   
   .skinandbody-service-tools {
@@ -317,9 +310,5 @@
   .makeup-content {
     padding-top: 10px;
     font-size: 1.1rem;
-  }
-  
-  .skinandbody-flowers-background {
-    opacity: 0.1;
   }
 }

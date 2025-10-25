@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import footerImage from '../assets/footer_image.png';
 import footerLogo from '../assets/footer_logo.png';
@@ -79,10 +80,9 @@ and entirely you.
               <div className="footer-section">
                 <h3 className="footer-heading">Our Store</h3>
                 <div className="footer-links">
-                  <a href="/" className="footer-link">Home</a>
-                  <a href="/about" className="footer-link">About</a>
-                  <a href="/services" className="footer-link">Services</a>
-                  <a href="/contact" className="footer-link">Contact</a>
+                  <Link to="/" className="footer-link">Home</Link>
+                  <Link to="/blog" className="footer-link">Blog</Link>
+                  <Link to="/contact" className="footer-link">Contact</Link>
                 </div>
               </div>
               
@@ -90,19 +90,19 @@ and entirely you.
                 <h3 className="footer-heading">Get in Touch</h3>
                 <div className="contact-info">
                   <div className="contact-link">
-                    <img src={locationIcon} alt="Location" className="contact-icon" />
+                    <img src={locationIcon} alt="Location" className="contact-icons" />
                     <span>Ground floor 3-184, Beside Hotel Serenity La Serene, Kavuri hills, madhapur, Hyderabad</span>
                   </div>
                   <a href="tel:+919234569999" className="contact-link">
-                    <img src={callIcon} alt="Call" className="contact-icon" />
+                    <img src={callIcon} alt="Call" className="contact-icons" />
                     +91 9234569999
                   </a>
                   <a href="https://wa.me/919234569999" target="_blank" rel="noopener noreferrer" className="contact-link">
-                    <img src={whatsappIcon} alt="WhatsApp" className="contact-icon" />
+                    <img src={whatsappIcon} alt="WhatsApp" className="contact-icons" />
                     +91 9234569999
                   </a>
                   <a href="mailto:Hello@Sashaclinics.Com" className="contact-link">
-                    <img src={emailIcon} alt="Email" className="contact-icon" />
+                    <img src={emailIcon} alt="Email" className="contact-icons" />
                     Hello@Sashaclinics.Com
                   </a>
                 </div>

@@ -1,15 +1,14 @@
-/* Skin Page Styles */
+/* Service Page 1 Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 .skin-page {
   background-color: #F4F1EC;
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  padding: 10px 0;
   min-height: 100vh;
-  position: relative;
-  overflow: hidden;
- 
+  
+  display: flex;
   background: #F5F3EE;
-  padding: 20px 0px;
-  margin-bottom: 20px;
+  flex-direction: column;
 }
 
 .skin-page::before {
@@ -43,6 +42,37 @@
   opacity: 0.9;
 }
 
+/* Hide SVG elements on mobile and tablet */
+@media (max-width: 1024px) {
+  .skin-page::before {
+    display: none;
+  }
+  
+  .skin-page::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .skin-page::before {
+    display: none;
+  }
+  
+  .skin-page::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .skin-page::before {
+    display: none;
+  }
+  
+  .skin-page::after {
+    display: none;
+  }
+}
+
 .skin-content {
   padding: 0 0 20px; /* Removed top padding to move content up */
   position: relative;
@@ -54,7 +84,7 @@
 
 .skin-bottom-image {
   position: absolute;
-  bottom: -375px;
+  bottom: -200px;
   left: 0;
   right: 0;
   text-align: center;
@@ -65,6 +95,25 @@
   align-items: flex-end;
   justify-content: center;
   
+}
+
+/* Responsive adjustments for bottom image */
+@media (max-width: 1024px) {
+  .skin-bottom-image {
+    bottom: -250px; /* Moved image down on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .skin-bottom-image {
+    bottom: -200px; /* Moved image down on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .skin-bottom-image {
+    bottom: -150px; /* Moved image down on small mobile */
+  }
 }
 
 .skin-bottom-image img {
@@ -125,9 +174,33 @@
 @media (max-width: 768px) {
   .skin-page h1 {
     font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .skin-page {
+    padding: 50px 0 80px 0px;
   }
   
   .skin-content {
-    padding: 60px 0;
+    padding: 60px 0 0;
+    margin-top: 0px;
+  }
+  
+  .skin-grid {
+    margin-top: 60px;
+    gap: 20px;
+  }
+  
+  .skin-bottom-image {
+    position: relative;
+    bottom: auto;
+    margin-top: 0px;
+    height: auto;
+    padding-bottom: 0px;
+  }
+  
+  .skin-bottom-image img {
+    max-width: 100%;
+    height: auto;
   }
 }

@@ -146,11 +146,13 @@
   
   .makeup-subtitle {
     font-size: 1.6rem;
+    margin-bottom: 45px;
   }
   
   .makeup-image-content-wrapper {
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    margin-top: 40px;
   }
   
   .makeup-images,
@@ -160,6 +162,7 @@
   
   .makeup-image {
     height: 300px;
+    margin-top: 30px;
   }
   
   .makeup-hero {
@@ -261,8 +264,11 @@
 /* Responsive adjustments for SVG elements */
 @media (max-width: 1024px) {
   .makeup-vector-brush {
-    width: 150px;
-    left: 30px;
+    display: none;
+  }
+  
+  .makeup-flowers-background {
+    display: none;
   }
   
   .makeup-service-tools {
@@ -274,9 +280,11 @@
 
 @media (max-width: 768px) {
   .makeup-vector-brush {
-    width: 100px;
-    left: 20px;
-    top: 20px;
+    display: none;
+  }
+  
+  .makeup-flowers-background {
+    display: none;
   }
   
   .makeup-service-tools {
@@ -284,17 +292,15 @@
     margin: -50px auto 0;
     margin-bottom: -15px;
   }
-  
-  .makeup-flowers-background {
-    opacity: 0.15;
-  }
 }
 
 @media (max-width: 480px) {
   .makeup-vector-brush {
-    width: 80px;
-    left: 15px;
-    top: 15px;
+    display: none;
+  }
+  
+  .makeup-flowers-background {
+    display: none;
   }
   
   .makeup-service-tools {
@@ -306,9 +312,5 @@
   .makeup-content {
     padding-top: 10px;
     font-size: 1.1rem;
-  }
-  
-  .makeup-flowers-background {
-    opacity: 0.1;
   }
 }

@@ -16,10 +16,11 @@ const HairCareRituals = () => {
       <div className="hair-care-rituals-content">
         <h2 className="hair-care-rituals-title">Hair Care Rituals</h2>
         <p className="hair-care-rituals-description">
-          Discover our personalized hair care rituals designed to nourish, strengthen, and revitalize your hair. From scalp treatments to deep conditioning, we offer solutions for every hair type and concern, ensuring lasting health and shine.
+        Luxury is in the details and in the way we care. Indulge in therapeutic scalp massages, Aromatherapy-infused washes, an customized nourishment masks that restore moisture, relieve stress, and promote healthy growth.
         </p>
         <p className="hair-care-rituals-includes">
-          <strong>Includes:</strong> Personalized consultation / Premium product application / Scalp massage
+          <strong>Includes:</strong> Scalp massage / Nourishment therapy 
+          / Hair wellness consultation
         </p>
         <img src={scissors} alt="Scissors icon" className="scissors-icon" />
       </div>
