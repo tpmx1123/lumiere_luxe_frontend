@@ -1,26 +1,17 @@
 import React from 'react';
 
 // Import SVG images
-import flowers from '../../assets/flowers.png';
-import vectorBrush from '../../assets/Vector brush.svg';
-import hairservicestools from '../../assets/hair services tools.svg';
+import hairServicesBnr from '../../assets/Hair Services Bnr.svg';
 
 
 const hairservice = () => {
   return (
     <div className="bg-salon-light-beige min-h-screen py-2.5 px-5 relative overflow-hidden flex flex-col">
-      {/* Vector brush SVG at top left */}
+      {/* Hair Services Banner SVG as background */}
       <img 
-        src={vectorBrush} 
-        alt="Vector brush decoration" 
-        className="absolute top-[-10px] -left-[45px] w-[180px] h-auto z-10 opacity-90 max-w-full hidden sm:block" 
-      />
-      
-      {/* Flowers SVG as background */}
-      <img 
-        src={flowers} 
-        alt="Flowers background" 
-        className="absolute top-[0px] left-0 w-full h-full object-cover z-[1] opacity-90 mix-blend-multiply max-w-full"
+        src={hairServicesBnr} 
+        alt="Hair Services Banner" 
+        className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-[1] opacity-100"
       />
       
       <div className="text-center m-0 p-0 relative z-[2] mt-0">
@@ -33,13 +24,6 @@ const hairservice = () => {
             At Lumiere Luxe, we believe hair is more than style — it's identity. Each strand tells a story of confidence, care, and character. 
             Our experts combine artistry with advanced hair science to craft looks that are timeless, healthy, and entirely you.
           </p>
-          
-          {/* Hair service tools SVG below content */}
-          <img 
-            src={hairservicestools} 
-            alt="Hair service tools" 
-            className="w-[1200px] h-auto mt-[40px] mx-auto block opacity-90 relative z-[5] pb-0 -mb-[50px] max-w-full lg:w-[1200px] lg:-mt-[155px] lg:-translate-y-[25px] md:w-[600px] md:mt-[0px] md:-mb-[40px] sm:w-[400px] sm:mt-[20px] sm:-mb-[20px]" 
-          />
         </div>
       </div>
     </div>
