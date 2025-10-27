@@ -3,7 +3,7 @@
 
 .service-page1 {
   background-color: #F4F1EC;
-  padding: 10px 0 40px;
+  padding: 10px 0;
   min-height: 100vh;
   
   display: flex;
@@ -199,10 +199,6 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .service-page1 {
-    padding: 20px 0 150px;
-  }
-  
   .container {
     padding: 0 15px;
   }
@@ -231,17 +227,6 @@
 }
 
 @media (max-width: 768px) {
-  .service-page1 {
-    padding: 15px 0 100px;
-  }
-  
-  .service-images {
-    flex-direction: row;
-    gap: 10px;
-    overflow: visible;
-    padding: 0;
-  }
-  
   .service-title {
     font-size: 2.8rem;
     margin-bottom: 15px;
@@ -262,45 +247,16 @@
     margin-bottom: 10px;
   }
   
-  .image-content-wrapper {
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .service-images,
-  .service-details {
-    width: 100%;
-  }
-  
   .service-image {
-    height: 200px;
-    width: calc(33.33% - 6.67px);
-    flex-shrink: 0;
-    object-fit: contain;
-    border-radius: 10px;
+    height: 300px;
   }
   
   .service-heading {
     font-size: 2.5rem;
   }
-  
-  .hair-image {
-    min-width: 150px;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 10px;
-  }
-  
-  .hair-heading {
-    font-size: 2.2rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .service-page1 {
-    padding: 10px 0 80px;
-  }
-  
   .service-title {
     font-size: 2.2rem;
   }
@@ -328,9 +284,68 @@
   }
 }
 
+@media (max-width: 768px) {
+  .service-images {
+    flex-direction: row;
+    gap: 10px;
+    overflow: visible;
+    padding: 0;
+  }
+  
+  .service-subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .image-content-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .service-images,
+  .service-details {
+    width: 100%;
+  }
+  
+  .service-image {
+    height: 200px;
+    width: calc(33.33% - 6.67px);
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .service-hero {
+    padding: 20px 0 10px;
+    margin-bottom: 10px;
+  }
+  
+  .service-title {
+    font-size: 2.8rem;
+  }
+  
+  .service-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .service-content {
+    font-size: 1rem;
+  }
+  
+  .hair-image {
+    min-width: 150px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .hair-heading {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 576px) {
   .service-page1 {
-    padding: 10px 0 80px;
+    padding: 60px 0;
   }
   
   .service-title {
@@ -388,62 +403,76 @@
 .hair-service-tools {
   width: 1200px;
   height: auto;
-  margin: -45px auto 0;
+  margin: -163px auto 0;
   display: block;
   opacity: 0.9;
   position: relative;
   z-index: 5;
-  transform: translateY(20px);
+  transform: translateY(-30px);
   padding-bottom: 0;
-  margin-bottom: -20px;
+  margin-bottom: -50px;
 }
 
 /* Responsive adjustments for SVG elements */
 @media (max-width: 1024px) {
   .vector-brush {
-    display: none;
+    width: 150px;
+    left: 30px;
+    top: 40px;
   }
   
   .flowers-background {
-    display: none;
+    top: 60px;
+    opacity: 0.9;
+    
   }
   
   .hair-service-tools {
     width: 600px;
-    margin: -30px auto 0;
-    margin-bottom: 0;
+    margin: -100px auto 0;
+    margin-bottom: -30px;
   }
 }
 
 @media (max-width: 768px) {
   .vector-brush {
-    display: none;
+    width: 100px;
+    left: 10px;
+    top: 10px;
   }
   
   .flowers-background {
-    display: none;
+    top: 50px;
+    opacity: 0.6;
+    height: 80%;
+    
   }
   
   .hair-service-tools {
-    width: 450px;
-    margin: 10px auto 0;
-    margin-bottom: 0;
+    width: 400px;
+    margin: -30px auto 0;
+    margin-bottom: -20px;
   }
 }
 
 @media (max-width: 480px) {
   .vector-brush {
-    display: none;
+    width: 80px;
+    left: 15px;
+    top: 15px;
   }
   
   .flowers-background {
-    display: none;
+    top: 40px;
+    opacity: 0.4;
+    height: 70%;
+    width: 100%;
   }
   
   .hair-service-tools {
-    width: 350px;
-    margin: 10px auto 0;
-    margin-bottom: 0;
+    width: 300px;
+    margin: -20px auto 0;
+    margin-bottom: -10px;
   }
   
   .service-content {
@@ -455,31 +484,39 @@
 /* Additional responsive breakpoints for better mobile experience */
 @media (max-width: 360px) {
   .vector-brush {
-    display: none;
+    width: 60px;
+    left: 10px;
+    top: 10px;
   }
   
   .flowers-background {
-    display: none;
+    top: 30px;
+    opacity: 0.3;
+    height: 60%;
   }
   
   .hair-service-tools {
     width: 250px;
-    margin: 15px auto 0;
-    margin-bottom: 0;
+    margin: -15px auto 0;
+    margin-bottom: -5px;
   }
 }
 
 @media (max-width: 320px) {
   .vector-brush {
-    display: none;
+    width: 50px;
+    left: 5px;
+    top: 5px;
   }
   
   .flowers-background {
-    display: none;
+    top: 25px;
+    opacity: 0.2;
+    height: 50%;
   }
   
   .hair-service-tools {
     width: 200px;
-    margin: 20px auto 0;
+    margin: -10px auto 0;
   }
 }
