@@ -235,6 +235,13 @@
     padding: 15px 0 100px;
   }
   
+  .service-images {
+    flex-direction: row;
+    gap: 10px;
+    overflow: visible;
+    padding: 0;
+  }
+  
   .service-title {
     font-size: 2.8rem;
     margin-bottom: 15px;
@@ -255,12 +262,37 @@
     margin-bottom: 10px;
   }
   
+  .image-content-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .service-images,
+  .service-details {
+    width: 100%;
+  }
+  
   .service-image {
-    height: 300px;
+    height: 200px;
+    width: calc(33.33% - 6.67px);
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 10px;
   }
   
   .service-heading {
     font-size: 2.5rem;
+  }
+  
+  .hair-image {
+    min-width: 150px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .hair-heading {
+    font-size: 2.2rem;
   }
 }
 
@@ -293,65 +325,6 @@
   .scissors-icon {
     width: 35px;
     height: 35px;
-  }
-}
-
-@media (max-width: 768px) {
-  .service-images {
-    flex-direction: row;
-    gap: 10px;
-    overflow: visible;
-    padding: 0;
-  }
-  
-  .service-subtitle {
-    font-size: 1.6rem;
-  }
-  
-  .image-content-wrapper {
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .service-images,
-  .service-details {
-    width: 100%;
-  }
-  
-  .service-image {
-    height: 200px;
-    width: calc(33.33% - 6.67px);
-    flex-shrink: 0;
-    object-fit: contain;
-    border-radius: 10px;
-  }
-  
-  .service-hero {
-    padding: 20px 0 10px;
-    margin-bottom: 10px;
-  }
-  
-  .service-title {
-    font-size: 2.8rem;
-  }
-  
-  .service-subtitle {
-    font-size: 1.3rem;
-  }
-  
-  .service-content {
-    font-size: 1rem;
-  }
-  
-  .hair-image {
-    min-width: 150px;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 10px;
-  }
-  
-  .hair-heading {
-    font-size: 2.2rem;
   }
 }
 
