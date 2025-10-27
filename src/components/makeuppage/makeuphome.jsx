@@ -37,7 +37,7 @@ const MakeupHome = () => {
           <img 
             src={makeupservicestools} 
             alt="Hair service tools" 
-            className="w-[700px] h-auto -mt-[50px] mx-auto block opacity-90 relative z-[5] -translate-y-[25px] pb-0 -mb-[50px] max-w-full lg:w-[600px] md:w-[400px] md:-mt-[20px] md:-mb-[40px] sm:w-[280px] sm:mt-0 sm:-mb-[20px]" 
+            className="w-[700px] h-auto mt-[40px] mx-auto block opacity-90 relative z-[5] pb-0 -mb-[50px] max-w-full lg:w-[600px] md:w-[400px] md:mt-[20px] md:-mb-[40px] sm:w-[280px] sm:mt-[20px] sm:-mb-[20px]" 
           />
         </div>
       </div>
