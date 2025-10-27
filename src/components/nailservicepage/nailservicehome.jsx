@@ -1,49 +1,48 @@
 import React from 'react';
 
 // Import SVG images
-import flowers from '../../assets/flowers.svg';
+import flowers from '../../assets/flowers.png';
 import vectorBrush from '../../assets/Vector brush.svg';
-import NailImage from '../../assets/nailservicesimg.png';
+import nailservicestools from '../../assets/nailservicesimg.png';
 
 
-const nailservice = () => {
+const NailServiceHome = () => {
   return (
-    <div className="font-inter text-[#2C2521] leading-relaxed min-h-screen relative overflow-hidden bg-salon-light-beige ">
+    <div className="bg-salon-light-beige min-h-screen py-2.5 px-5 relative overflow-hidden flex flex-col">
       {/* Vector brush SVG at top left */}
       <img 
         src={vectorBrush} 
         alt="Vector brush decoration" 
-        className="absolute top-[-10px] -left-[45px] w-[180px] h-auto z-10 opacity-90 max-w-full block" 
+        className="absolute top-[-10px] -left-[45px] w-[180px] h-auto z-10 opacity-90 max-w-full hidden sm:block" 
       />
       
       {/* Flowers SVG as background */}
       <img 
         src={flowers} 
         alt="Flowers background" 
-        className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover z-[1] opacity-100 pointer-events-none lg:opacity-100 md:opacity-70 sm:opacity-50"
+        className="absolute top-[0px] left-0 w-full h-full object-cover z-[1] opacity-90 mix-blend-multiply max-w-full"
       />
       
-      <div className="py-5 pb-[450px] relative z-[2] min-h-screen flex flex-col md:pb-[350px] sm:pb-[300px]">
-        <div className="max-w-[1200px] mx-auto px-5 relative">
-          <h1 className="font-playfair text-salon-gold text-[5.2rem] m-0 mb-[5px] text-center relative font-medium tracking-[0.5px] leading-[1.2] lg:text-[5.2rem] md:text-[4rem] sm:text-[2.8rem] sm:mb-4">
+      <div className="text-center m-0 p-0 relative z-[2] mt-0">
+        <div className="max-w-[1200px] mx-auto px-5">
+          <h1 className="font-playfair text-salon-gold text-[4.5rem] m-0 mb-2.5 font-light tracking-[1.5px] leading-[1.1] relative z-[2] lg:text-[4.5rem] md:text-[3.5rem] sm:text-[2.8rem]">
             Nail Services
           </h1>
           
-          <p className="font-inter text-salon-dark-brown text-[1.2rem] text-center max-w-[1200px] mx-auto mt-[5px] mb-[20px] leading-[1.3] font-normal lg:text-[1.2rem] md:text-[1.1rem] sm:text-base sm:max-w-[90%] md:mb-[15px] sm:mb-[10px]">
-            At Lumiere Luxe, we believe nails are more than beauty. They are an expression. Each detail and shade is crafted to reflect your mood, personality, and rhythm. Our experts combine global artistry with thoughtful care to create looks that are refined, lasting, and uniquely yours.
+          <p className="text-xl leading-relaxed max-w-[1020px] mx-auto mt-0 font-normal text-salon-dark-brown font-inter pt-5 relative z-[2] px-5 lg:text-xl md:text-lg sm:text-base mb-[60px] md:mb-[50px] sm:mb-[40px]">
+          At Lumiere Luxe, we believe nails are more than beauty. They are an expression. Each detail and shade is crafted to reflect your mood, personality, and rhythm. Our experts combine global artistry with thoughtful care to create looks that are refined, lasting, and uniquely yours.
           </p>
-         
-          <div className="absolute bottom-[-450px] left-0 right-0 text-center z-[3] pointer-events-none h-[40%] flex items-end justify-center md:bottom-[-350px] md:h-[30%] sm:bottom-[-300px] sm:h-[30%]">
-            <img 
-              src={NailImage} 
-              alt="Nail care" 
-              className="max-w-[800px] w-[80%] h-auto object-contain pointer-events-none select-none md:max-w-[600px] md:w-[70%] sm:max-w-[400px] sm:w-[80%]" 
-            />
-          </div>
+          
+          {/* Hair service tools SVG below content */}
+          <img 
+            src={nailservicestools} 
+            alt="Hair service tools" 
+            className="w-[900px] h-auto -mt-[50px] mx-auto block opacity-90 relative z-[5] -translate-y-[25px] pb-0 -mb-[50px] max-w-full lg:w-[800px] md:w-[450px] md:-mt-[20px] md:-mb-[40px] sm:w-[300px] sm:mt-0 sm:-mb-[20px]" 
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default nailservice;
+export default NailServiceHome;
