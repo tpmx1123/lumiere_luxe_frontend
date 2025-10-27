@@ -8,12 +8,12 @@ import NailImage from '../../assets/nailservicesimg.png';
 
 const nailservice = () => {
   return (
-    <div className="font-inter text-[#2C2521] leading-relaxed min-h-screen relative overflow-hidden bg-white">
+    <div className="font-inter text-[#2C2521] leading-relaxed min-h-screen relative overflow-hidden bg-salon-light-beige ">
       {/* Vector brush SVG at top left */}
       <img 
         src={vectorBrush} 
         alt="Vector brush decoration" 
-        className="absolute top-[-10px] -right-[px] w-[170px] h-[190px] z-[3] opacity-90 object-contain pointer-events-none block" 
+        className="absolute top-[-10px] -left-[45px] w-[180px] h-auto z-10 opacity-90 max-w-full block" 
       />
       
       {/* Flowers SVG as background */}

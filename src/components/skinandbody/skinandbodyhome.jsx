@@ -38,7 +38,7 @@ const SkinAndBodyHome = () => {
             blends advanced skincare science with the art of touch - ensuring results that feel as good as they look.
           </p>
           
-          <div className="absolute bottom-[-450px] left-0 right-0 text-center z-[3] pointer-events-none h-[40%] flex items-end justify-center md:bottom-[-350px] md:h-[30%] sm:bottom-[-250px] sm:h-[30%]">
+          <div className="absolute bottom-[-455px] left-0 right-0 text-center z-[3] pointer-events-none h-[40%] flex items-end justify-center md:bottom-[-355px] md:h-[30%] sm:bottom-[-255px] sm:h-[30%]">
             <img 
               src={skinandbodyimg} 
               alt="Skin and body service tools" 
