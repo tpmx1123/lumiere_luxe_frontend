@@ -38,7 +38,7 @@ const hairservice = () => {
           <img 
             src={hairservicestools} 
             alt="Hair service tools" 
-            className="w-[1200px] h-auto mt-[40px] mx-auto block opacity-90 relative z-[5] pb-0 -mb-[50px] max-w-full lg:w-[1200px] lg:-mt-[155px] lg:-translate-y-[25px] md:w-[600px] md:mt-[20px] md:-mb-[40px] sm:w-[400px] sm:mt-[20px] sm:-mb-[20px]" 
+            className="w-[1200px] h-auto mt-[40px] mx-auto block opacity-90 relative z-[5] pb-0 -mb-[50px] max-w-full lg:w-[1200px] lg:-mt-[155px] lg:-translate-y-[25px] md:w-[600px] md:mt-[0px] md:-mb-[40px] sm:w-[400px] sm:mt-[20px] sm:-mb-[20px]" 
           />
         </div>
       </div>
