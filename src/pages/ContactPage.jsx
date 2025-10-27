@@ -61,18 +61,7 @@ const ContactPage = () => {
                 </p>
 
                 <div className="contact-methods">
-                  <div className="contact-method" onClick={handleMapClick}>
-                    <div className="contact-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
-                      </svg>
-                    </div>
-                    <div className="contact-text">
-                      <h3>Visit Us</h3>
-                      <p>Lumiere Luxe Salon, <br />Madhapur, Hyderabad<br />Telangana 500081</p>
-                      <span className="click-hint">Click to open in Maps</span>
-                    </div>
-                  </div> 
+                   
 
                   <div className="contact-method" onClick={() => handlePhoneClick('+91 92345 69999')}>
                     <div className="contact-icon">
@@ -112,9 +101,39 @@ const ContactPage = () => {
                       <span className="click-hint">Click to chat</span>
                     </div>
                   </div>
+
+                  <div className="contact-method" onClick={handleMapClick}>
+                    <div className="contact-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <div className="contact-text">
+                      <h3>Visit Us</h3>
+                      <p>Lumiere Luxe Salon, <br />Madhapur, Hyderabad<br />Telangana 500081</p>
+                      <span className="click-hint">Click to open in Maps</span>
+                    </div>
+                    <div className="maps-container">
+              <div className="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7826341!2d78.38729061437888!3d17.44823598861732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb919fdb47e57b%3A0x4a2e4a84d29d20e0!2sMadhapur%2C%20Hyderabad%2C%20Telangana%20500081!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
+                  width="100%"
+                  height="100"
+                  style={{ border: 0, borderRadius: '20px' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lumiere Luxe Salon Location"
+                ></iframe>
+              </div>
+            </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Maps Section */}
+           
 
             {/* Right Side - Booking Form */}
             <div className="booking-section">
@@ -145,7 +164,7 @@ const ContactPage = () => {
           <div className="hours-grid">
             <div className="hours-item">
               <h3>Monday - Sunday</h3>
-              <p>9:00 AM - 9:00 PM</p>
+              <p>9:00 AM - 11:00 PM</p>
             </div>
             
           </div>

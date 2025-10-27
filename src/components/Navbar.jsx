@@ -59,10 +59,10 @@ const Navbar = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <Link to="/hair-service-in-madhapur" className="dropdown-item">Hair Service</Link>
-                  <Link to="/nail-service-in-madhapur" className="dropdown-item">Nail Service</Link>
-                  <Link to="/skin-body-service-in-madhapur" className="dropdown-item">Skin & Body Service</Link>
-                  <Link to="/makeup-page-in-madhapur" className="dropdown-item">Makeup Page</Link>
+                  <Link to="/hair-service-in-madhapur" className="dropdown-item">Hair Care</Link>
+                  <Link to="/nail-service-in-madhapur" className="dropdown-item">Nail Care</Link>
+                  <Link to="/skin-body-service-in-madhapur" className="dropdown-item">Skin & Body </Link>
+                  <Link to="/makeup-page-in-madhapur" className="dropdown-item">Makeup </Link>
                 </div>
               )}
             </li>
@@ -117,10 +117,10 @@ const Navbar = () => {
                   <span className="mobile-dropdown-arrow">▼</span>
                 </div>
                 <ul className="mobile-submenu">
-                  <li><Link to="/hair-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Hair Service</Link></li>
-                  <li><Link to="/nail-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Nail Service</Link></li>
-                  <li><Link to="/skin-body-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Skin & Body Service</Link></li>
-                  <li><Link to="/makeup-page-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Makeup Page</Link></li>
+                  <li><Link to="/hair-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Hair Care</Link></li>
+                  <li><Link to="/nail-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Nail Care</Link></li>
+                  <li><Link to="/skin-body-service-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Skin & Body </Link></li>
+                  <li><Link to="/makeup-page-in-madhapur" className="mobile-submenu-link" onClick={closeMobileMenu}>Makeup</Link></li>
                 </ul>
               </li>
               
