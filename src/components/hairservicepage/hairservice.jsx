@@ -29,7 +29,7 @@ const hairservice = () => {
             Hair Services
           </h1>
           
-          <p className="text-xl leading-relaxed max-w-[1020px] mx-auto mt-0 font-normal text-salon-dark-brown font-inter pt-5 relative z-[2] px-5 mb-[80px] lg:text-xl md:text-lg sm:text-base md:mb-[50px] sm:mb-[40px]">
+          <p className="text-xl leading-relaxed max-w-[1020px] mx-auto mt-0 font-normal text-salon-dark-brown font-inter pt-5 relative z-[2] px-5 mb-[80px] md:mb-[60px] sm:mb-[40px] lg:text-xl md:text-lg sm:text-base">
             At Lumiere Luxe, we believe hair is more than style — it's identity. Each strand tells a story of confidence, care, and character. 
             Our experts combine artistry with advanced hair science to craft looks that are timeless, healthy, and entirely you.
           </p>
@@ -38,7 +38,7 @@ const hairservice = () => {
           <img 
             src={hairservicestools} 
             alt="Hair service tools" 
-            className="w-[1200px] h-auto -mt-[155px] mx-auto block opacity-90 relative z-[5] -translate-y-[25px] pb-0 -mb-[50px] max-w-full lg:w-[1200px] md:w-[600px] md:-mt-0 md:-mb-[40px] sm:w-[400px] sm:mt-0 sm:-mb-[20px]" 
+            className="w-[1200px] h-auto mt-[40px] mx-auto block opacity-90 relative z-[5] pb-0 -mb-[50px] max-w-full lg:w-[1200px] lg:-mt-[155px] lg:-translate-y-[25px] md:w-[600px] md:mt-[20px] md:-mb-[40px] sm:w-[400px] sm:mt-[20px] sm:-mb-[20px]" 
           />
         </div>
       </div>

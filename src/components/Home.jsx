@@ -55,7 +55,7 @@ const Home = () => {
           <p className="descriptions">
             Step into a sanctuary where leaders, creatives, and tastemakers trust our expert team for transformative self-care. From bespoke hair and makeup to rejuvenating facials, wellness therapies, and nail artistry, every moment at Lumiere is crafted to leave you radiant—inside and out.
           </p>
-          <div className="cta-buttons">
+          <div className="ctaa-buttons">
             <button className="btn-primary" onClick={openBookingModal}>Book Your Experience</button>
             <button className="btn-secondary" onClick={navigateToExploreServices}>Explore Services</button>
           </div>
