@@ -3,7 +3,7 @@
 
 .service-page1 {
   background-color: #F4F1EC;
-  padding: 10px 0;
+  padding: 10px 0 40px;
   min-height: 100vh;
   
   display: flex;
@@ -199,6 +199,10 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .service-page1 {
+    padding: 20px 0 150px;
+  }
+  
   .container {
     padding: 0 15px;
   }
@@ -227,6 +231,10 @@
 }
 
 @media (max-width: 768px) {
+  .service-page1 {
+    padding: 15px 0 100px;
+  }
+  
   .service-title {
     font-size: 2.8rem;
     margin-bottom: 15px;
@@ -257,6 +265,10 @@
 }
 
 @media (max-width: 480px) {
+  .service-page1 {
+    padding: 10px 0 80px;
+  }
+  
   .service-title {
     font-size: 2.2rem;
   }
@@ -345,7 +357,7 @@
 
 @media (max-width: 576px) {
   .service-page1 {
-    padding: 60px 0;
+    padding: 10px 0 80px;
   }
   
   .service-title {
@@ -403,14 +415,14 @@
 .hair-service-tools {
   width: 1200px;
   height: auto;
-  margin: -120px auto 0;
+  margin: -45px auto 0;
   display: block;
   opacity: 0.9;
   position: relative;
   z-index: 5;
-  transform: translateY(-30px);
+  transform: translateY(20px);
   padding-bottom: 0;
-  margin-bottom: -50px;
+  margin-bottom: -20px;
 }
 
 /* Responsive adjustments for SVG elements */
@@ -425,8 +437,8 @@
   
   .hair-service-tools {
     width: 600px;
-    margin: -100px auto 0;
-    margin-bottom: -30px;
+    margin: -30px auto 0;
+    margin-bottom: 0;
   }
 }
 
@@ -441,8 +453,8 @@
   
   .hair-service-tools {
     width: 450px;
-    margin: -30px auto 0;
-    margin-bottom: -20px;
+    margin: 10px auto 0;
+    margin-bottom: 0;
   }
 }
 
@@ -457,8 +469,8 @@
   
   .hair-service-tools {
     width: 350px;
-    margin: -20px auto 0;
-    margin-bottom: -10px;
+    margin: 10px auto 0;
+    margin-bottom: 0;
   }
   
   .service-content {
@@ -479,8 +491,8 @@
   
   .hair-service-tools {
     width: 250px;
-    margin: -15px auto 0;
-    margin-bottom: -5px;
+    margin: 15px auto 0;
+    margin-bottom: 0;
   }
 }
 
@@ -495,6 +507,6 @@
   
   .hair-service-tools {
     width: 200px;
-    margin: -10px auto 0;
+    margin: 20px auto 0;
   }
 }
