@@ -1,10 +1,12 @@
-import React, { useState } from 'react';  
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import homeImage from '../assets/home-img1.png';
 import homeEffectBg from '../assets/homeeffectbg.png';
 import BookingModal from './BookingModal';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const openBookingModal = () => {
@@ -13,6 +15,10 @@ const Home = () => {
 
   const closeBookingModal = () => {
     setIsBookingModalOpen(false);
+  };
+
+  const navigateToExploreServices = () => {
+    navigate('/explore-services');
   };
 
   return (
@@ -51,7 +57,7 @@ const Home = () => {
           </p>
           <div className="cta-buttons">
             <button className="btn-primary" onClick={openBookingModal}>Book Your Experience</button>
-            <button className="btn-secondary">Explore Services</button>
+            <button className="btn-secondary" onClick={navigateToExploreServices}>Explore Services</button>
           </div>
         </div>
       </div>

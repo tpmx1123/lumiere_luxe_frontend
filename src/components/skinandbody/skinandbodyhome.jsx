@@ -40,7 +40,7 @@ const SkinAndBodyHome = () => {
           <img 
             src={skinandbodyimg} 
             alt="Hair service tools" 
-            className="w-[900px] h-auto -mt-[30px] mx-auto block opacity-90 relative z-[5] -translate-y-[25px] pb-0 -mb-[50px] max-w-full lg:w-[800px] md:w-[450px] md:mt-[20px] md:-mb-[40px] sm:w-[300px] sm:mt-[20px] sm:-mb-[20px]" 
+            className="w-[900px] h-auto -mt-[25px] mx-auto block opacity-90 relative z-[5] -translate-y-[25px] pb-0 -mb-[50px] max-w-full lg:w-[800px] md:w-[450px] md:mt-[20px] md:-mb-[40px] sm:w-[300px] sm:mt-[20px] sm:-mb-[20px]" 
           />
         </div>
       </div>

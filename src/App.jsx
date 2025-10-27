@@ -9,6 +9,7 @@ import SkinBodyServicePage from './pages/SkinBodyServicePage.jsx';
 import MakeupPage from './pages/makeuppage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import BlogPage from './pages/BlogPage.jsx';
+import ExploreServices from './pages/ExploreServices.jsx';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/makeup-page-in-madhapur" element={<MakeupPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/explore-services" element={<ExploreServices />} />
         </Routes>
       </div>
     </Router>
