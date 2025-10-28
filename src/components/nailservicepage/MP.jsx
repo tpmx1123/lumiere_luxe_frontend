@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import manicurepedicureimg1 from '../../assets/manicurepedicureimg1.png';
 import manicurepedicureimg2 from '../../assets/manicurepedicureimg2.png';
 import './MP.css';
