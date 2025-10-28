@@ -1,26 +1,17 @@
 import React from 'react';
 
-// Import SVG images
-import flowers from '../../assets/flowers.png';
-import vectorBrush from '../../assets/Vector brush.svg';
-import nailservicestools from '../../assets/nailservicesimg.png';
+// Import SVG banner
+import nailServicesBnr from '../../assets/Nail Services Bnr.svg';
 
 
 const NailServiceHome = () => {
   return (
     <div className="bg-salon-light-beige min-h-screen py-2.5 px-5 relative overflow-hidden flex flex-col">
-      {/* Vector brush SVG at top left */}
+      {/* Nail Services Banner SVG as background */}
       <img 
-        src={vectorBrush} 
-        alt="Vector brush decoration" 
-        className="absolute top-[-10px] -left-[45px] w-[180px] h-auto z-10 opacity-90 max-w-full hidden sm:block" 
-      />
-      
-      {/* Flowers SVG as background */}
-      <img 
-        src={flowers} 
-        alt="Flowers background" 
-        className="absolute top-[0px] left-0 w-full h-full object-cover z-[1] opacity-90 mix-blend-multiply max-w-full"
+        src={nailServicesBnr} 
+        alt="Nail Services Banner" 
+        className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-[1] opacity-100"
       />
       
       <div className="text-center m-0 p-0 relative z-[2] mt-0">
@@ -29,16 +20,10 @@ const NailServiceHome = () => {
             Nail Services
           </h1>
           
-          <p className="text-xl leading-relaxed max-w-[1020px] mx-auto mt-0 font-normal text-salon-dark-brown font-inter pt-5 relative z-[2] px-5 lg:text-xl md:text-lg sm:text-base mb-[60px] md:mb-[50px] sm:mb-[40px]">
-          At Lumiere Luxe, we believe nails are more than beauty. They are an expression. Each detail and shade is crafted to reflect your mood, personality, and rhythm. Our experts combine global artistry with thoughtful care to create looks that are refined, lasting, and uniquely yours.
+          <p className="text-xl leading-relaxed max-w-[1020px] mx-auto mt-0 font-normal text-salon-dark-brown font-inter pt-5 relative z-[2] px-5 mb-[80px] md:mb-[60px] sm:mb-[40px] lg:text-xl md:text-lg sm:text-base">
+            At Lumiere Luxe, we believe nails are more than beauty — they're an expression. Each detail and shade is crafted to reflect your mood, personality, and rhythm. 
+            Our experts combine global artistry with thoughtful care to create looks that are refined, lasting, and uniquely yours.
           </p>
-          
-          {/* Hair service tools SVG below content */}
-          <img 
-            src={nailservicestools} 
-            alt="Hair service tools" 
-            className="w-[900px] h-auto -mt-[50px] mx-auto block opacity-90 relative z-[5] -translate-y-[25px] pb-0 -mb-[50px] max-w-full lg:w-[800px] md:w-[450px] md:-mt-[20px] md:-mb-[40px] sm:w-[300px] sm:mt-0 sm:-mb-[20px]" 
-          />
         </div>
       </div>
     </div>

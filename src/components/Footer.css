@@ -82,11 +82,11 @@
 
 .lumiere-text {
   color: #eedfcc;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
   line-height: 1.9;
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
   max-width: none;
 }
 

@@ -1,26 +1,17 @@
 import React from 'react';
 
-// Import SVG images
-import flowers from '../../assets/flowers.png';
-import vectorBrush from '../../assets/Vector brush.svg';
-import makeupservicestools from '../../assets/makeuphomeimg.png';
+// Import SVG banner
+import makeupBnr from '../../assets/Makeup Bnr.svg';
 
 
 const MakeupHome = () => {
   return (
     <div className="bg-salon-light-beige min-h-screen py-2.5 px-5 relative overflow-hidden flex flex-col">
-      {/* Vector brush SVG at top left */}
+      {/* Makeup Banner SVG as background */}
       <img 
-        src={vectorBrush} 
-        alt="Vector brush decoration" 
-        className="absolute top-[-10px] -left-[45px] w-[180px] h-auto z-10 opacity-90 max-w-full hidden sm:block" 
-      />
-      
-      {/* Flowers SVG as background */}
-      <img 
-        src={flowers} 
-        alt="Flowers background" 
-        className="absolute top-[0px] left-0 w-full h-full object-cover z-[1] opacity-90 mix-blend-multiply max-w-full"
+        src={makeupBnr} 
+        alt="Makeup Banner" 
+        className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-[1] opacity-100"
       />
       
       <div className="text-center m-0 p-0 relative z-[2] mt-0">
@@ -29,16 +20,10 @@ const MakeupHome = () => {
             Makeup
           </h1>
           
-          <p className="text-xl leading-relaxed max-w-[1020px] mx-auto mt-0 font-normal text-salon-dark-brown font-inter pt-5 relative z-[2] px-5 lg:text-xl md:text-lg sm:text-base mb-[60px] md:mb-[50px] sm:mb-[40px]">
-          At Lumiere Luxe, makeup is more than colour - it's composition. Our artists craft refined, skin-conscious looks that enhance your natural beauty. From soft to bold, every look is designed to move with confidence and light.
+          <p className="text-xl leading-relaxed max-w-[1020px] mx-auto mt-0 font-normal text-salon-dark-brown font-inter pt-5 relative z-[2] px-5 mb-[80px] md:mb-[60px] sm:mb-[40px] lg:text-xl md:text-lg sm:text-base">
+            At Lumiere Luxe, makeup is more than colour — it's composition. Our artists craft refined, skin-conscious looks that enhance your natural beauty. 
+            From soft to bold, every look is designed to move with confidence and light.
           </p>
-          
-          {/* Hair service tools SVG below content */}
-          <img 
-            src={makeupservicestools} 
-            alt="Hair service tools" 
-            className="w-[700px] h-auto mt-[40px] mx-auto block opacity-90 relative z-[5] pb-0 -mb-[50px] max-w-full lg:w-[600px] md:w-[400px] md:mt-[20px] md:-mb-[40px] sm:w-[280px] sm:mt-[20px] sm:-mb-[20px]" 
-          />
         </div>
       </div>
     </div>

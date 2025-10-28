@@ -35,6 +35,8 @@ const Footer = () => {
       <div className="footer-overlay">
         <div className="footer-content">
           <div className="footer-main">
+            
+            {/* Logo & Description Section */}
             <div className="logo-container">
               <div className="logo-section">
                 <img 
@@ -68,15 +70,20 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
+
               <div className="logo-content">
                 <p className="lumiere-text">
-                  At Lumiere Luxe, we believe hair is more than style  it’s identity. Each strand tells a story of confidence, care, and character. Our experts combine artistry with advanced hair science to craft looks that are timeless, healthy, 
-and entirely you.
+                  At Lumiere Luxe, we believe hair is more than style — it’s identity. 
+                  Each strand tells a story of confidence, care, and character. 
+                  Our experts combine artistry with advanced hair science to craft looks 
+                  that are timeless, healthy, and entirely you.
                 </p>
               </div>
             </div>
             
+            {/* Footer Links and Contact Info */}
             <div className="footer-sections">
+              
               <div className="footer-section">
                 <h3 className="footer-heading">Our Store</h3>
                 <div className="footer-links">
@@ -89,21 +96,39 @@ and entirely you.
               <div className="footer-section">
                 <h3 className="footer-heading">Get in Touch</h3>
                 <div className="contact-info">
-                  <div className="contact-link">
+                  
+                  {/* Clickable Google Maps Link */}
+                  <a
+                    href="https://maps.app.goo.gl/5cGaE8FA8SvvXgUt9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-link"
+                  >
                     <img src={locationIcon} alt="Location" className="contact-icons" />
-                    <span>Ground floor 3-184, Beside Hotel Serenity La Serene, Kavuri hills, madhapur, Hyderabad</span>
-                  </div>
+                    <span>
+                      Ground floor 3-184, Beside Hotel Serenity La Serene, Kavuri hills, 
+                      Madhapur, Hyderabad, Telangana, India
+                    </span>
+                  </a>
+
                   <a href="tel:+919234569999" className="contact-link">
                     <img src={callIcon} alt="Call" className="contact-icons" />
                     +91 9234569999
                   </a>
-                  <a href="https://wa.me/919234569999" target="_blank" rel="noopener noreferrer" className="contact-link">
+
+                  <a 
+                    href="https://wa.me/917075447437" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="contact-link"
+                  >
                     <img src={whatsappIcon} alt="WhatsApp" className="contact-icons" />
-                    +91 9234569999
+                    +91 7075447437
                   </a>
-                  <a href="mailto:Hello@Sashaclinics.Com" className="contact-link">
+
+                  <a href="mailto:lumiereluxe0030@gmail.com" className="contact-link">
                     <img src={emailIcon} alt="Email" className="contact-icons" />
-                    Hello@Sashaclinics.Com
+                    lumiereluxe0030@gmail.com
                   </a>
                 </div>
               </div>
@@ -117,8 +142,9 @@ and entirely you.
             </div>
           )}
           
+          {/* Footer Bottom */}
           <p className="copyright">
-            Copyright {new Date().getFullYear()} Sasha Clinics. All rights reserved.
+            © {new Date().getFullYear()} Sasha Clinics. All rights reserved.
           </p>
         </div>
       </div>
