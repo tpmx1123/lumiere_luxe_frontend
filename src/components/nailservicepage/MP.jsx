@@ -35,13 +35,13 @@ with quiet luxury.
 perfection
               </p>
               <div className="mp-arrow">
-                <Link to="/booking">
+               
                   <img 
                     src={require('../../assets/Button.png')} 
                     alt="Book Now" 
                     className="mp-arrow-img"
                   />
-                </Link>
+               
               </div>
             </div>
           </div>

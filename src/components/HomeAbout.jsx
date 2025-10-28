@@ -28,7 +28,7 @@ const HomeSection2 = () => {
           <ul className="features-list">
             <li>
               <span className="bullet">•</span>
-              Unrushed&nbsp;rituals &nbsp;for hair, skin, and soul.
+              Curated&nbsp;rituals &nbsp;for hair, skin, and soul.
             </li>
             <li>
               <span className="bullet">•</span>
