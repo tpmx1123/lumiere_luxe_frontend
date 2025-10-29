@@ -10,6 +10,7 @@ import MakeupPage from './pages/makeuppage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import BlogPage from './pages/BlogPage.jsx';
 import ExploreServices from './pages/ExploreServices.jsx';
+import ErrorPage from './pages/ErrorPage.jsx';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/explore-services" element={<ExploreServices />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
     </Router>

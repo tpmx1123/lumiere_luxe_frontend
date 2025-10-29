@@ -1,0 +1,175 @@
+.error-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F4F1EC 0%, #E8E0D6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.error-container {
+  text-align: center;
+  z-index: 1;
+}
+
+.oops-eyes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.eye-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  width: 80px;
+  height: 15px;
+  background: #604A31;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(96, 74, 49, 0.3);
+  z-index: 2;
+}
+
+.eyebrow-left {
+  transform: rotate(-5deg);
+  border-top-left-radius: 60% 100%;
+  border-top-right-radius: 40% 80%;
+}
+
+.eyebrow-right {
+  transform: rotate(5deg);
+  border-top-left-radius: 40% 80%;
+  border-top-right-radius: 60% 100%;
+}
+
+.eyebrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #906B3A 0%, #604A31 100%);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.eye {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(144, 107, 58, 0.15),
+              inset -10px -10px 20px rgba(96, 74, 49, 0.05);
+  overflow: hidden;
+  border: 3px solid rgba(144, 107, 58, 0.2);
+}
+
+.pupil {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.1s ease-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform-origin: center center;
+}
+
+.error-title {
+  font-size: 72px;
+  font-weight: 800;
+  color: #906B3A;
+  margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(144, 107, 58, 0.2);
+}
+
+.error-message {
+  font-size: 32px;
+  color: #604A31;
+  margin: 10px 0;
+  background-color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.error-description {
+  font-size: 18px;
+  color: #604A31;
+  margin: 20px 0 40px;
+  font-family: 'Arial', sans-serif;
+  opacity: 0.8;
+}
+
+.home-button {
+  background: #906B3A;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 15px rgba(144, 107, 58, 0.3);
+  text-transform: none;
+}
+
+.home-button:hover {
+  background: #7a5a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(144, 107, 58, 0.4);
+}
+
+.home-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(144, 107, 58, 0.3);
+}
+
+@media (max-width: 768px) {
+  .eyebrow {
+    width: 70px;
+    height: 12px;
+    margin-bottom: 12px;
+  }
+
+  .eye {
+    width: 100px;
+    height: 100px;
+  }
+
+  .pupil {
+    width: 40px;
+    height: 40px;
+  }
+
+  .error-title {
+    font-size: 48px;
+  }
+
+  .error-message {
+    font-size: 24px;
+  }
+
+  .oops-eyes {
+    gap: 20px;
+  }
+}
+
