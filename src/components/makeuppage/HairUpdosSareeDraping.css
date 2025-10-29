@@ -13,10 +13,10 @@
 .hair-updos-saree-draping-content {
   flex: 0 1 530px;
   max-width: 530px;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   margin: 0;
  
 }
@@ -26,7 +26,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 40px 0;
+    padding-bottom: 40px 0px;
     gap: 0;
     margin: 0 auto;
   }
@@ -59,7 +59,7 @@
 
 .hair-updos-saree-draping-description {
   font-size: 1.2rem;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0 0 25px;
   font-weight: 300;
   color: #604a31;
@@ -70,7 +70,7 @@
 }
 
 .hair-updos-saree-draping-includes {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: #604a31;
   font-family: 'Inter', sans-serif;
@@ -217,7 +217,7 @@
   }
   
   .hair-updos-saree-draping-includes {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 25px;
     text-align: left;
   }

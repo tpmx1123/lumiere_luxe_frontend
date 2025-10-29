@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import './BookingModal.css';
 
 const BookingModal = ({ isOpen, onClose }) => {
@@ -11,6 +12,74 @@ const BookingModal = ({ isOpen, onClose }) => {
     time: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  // Time slots
+  const allTimeSlots = [
+    { value: '09:00', label: '9:00 AM' },
+    { value: '10:00', label: '10:00 AM' },
+    { value: '11:00', label: '11:00 AM' },
+    { value: '12:00', label: '12:00 PM' },
+    { value: '13:00', label: '1:00 PM' },
+    { value: '14:00', label: '2:00 PM' },
+    { value: '15:00', label: '3:00 PM' },
+    { value: '16:00', label: '4:00 PM' },
+    { value: '17:00', label: '5:00 PM' },
+    { value: '18:00', label: '6:00 PM' },
+    { value: '19:00', label: '7:00 PM' },
+    { value: '20:00', label: '8:00 PM' }
+  ];
+
+  // Get today's date in YYYY-MM-DD format
+  const getTodayDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+  // Get current time in HH:MM format
+  const getCurrentTime = () => {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+  };
+
+  // Compute available times based on selected date
+  const getAvailableTimes = () => {
+    if (!formData.date) {
+      return allTimeSlots;
+    }
+
+    const today = getTodayDate();
+    const isToday = formData.date === today;
+
+    if (isToday) {
+      const currentTime = getCurrentTime();
+      return allTimeSlots.filter(slot => slot.value >= currentTime);
+    }
+    
+    return allTimeSlots;
+  };
+
+  const availableTimes = getAvailableTimes();
+
+  // Reset time when date changes if time is in the past
+  useEffect(() => {
+    if (formData.date) {
+      const today = getTodayDate();
+      if (formData.date === today && formData.time) {
+        const currentTime = getCurrentTime();
+        if (formData.time < currentTime) {
+          setFormData(prev => ({ ...prev, time: '' }));
+        }
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formData.date]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,21 +89,58 @@ const BookingModal = ({ isOpen, onClose }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Booking submitted:', formData);
-    // Reset form and close modal
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      date: '',
-      time: '',
-      message: ''
-    });
-    onClose();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Initialize EmailJS - Update these values with your actual credentials
+      const serviceId = 'service_u4l22j8';
+      const templateId = 'template_gen0rad';
+      const publicKey = 'rGfPjy7-itYX_H8zk';
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          to_email: 'venkataniharbillakurthi@gmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          date: formData.date,
+          time: formData.time,
+          message: formData.message,
+          reply_to: formData.email,
+        },
+        publicKey
+      );
+
+      setSubmitStatus('success');
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        date: '',
+        time: '',
+        message: ''
+      });
+      
+      // Close modal after 2 seconds
+      setTimeout(() => {
+        onClose();
+        setSubmitStatus(null);
+      }, 2000);
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleClose = () => {
@@ -47,6 +153,8 @@ const BookingModal = ({ isOpen, onClose }) => {
       time: '',
       message: ''
     });
+    setSubmitStatus(null);
+    setIsSubmitting(false);
     onClose();
   };
 
@@ -63,6 +171,17 @@ const BookingModal = ({ isOpen, onClose }) => {
         </div>
         
         <form className="booking-form" onSubmit={handleSubmit}>
+          {submitStatus === 'success' && (
+            <div className="status-message success-message">
+              ✓ Booking request sent successfully! You'll receive a confirmation shortly.
+            </div>
+          )}
+          {submitStatus === 'error' && (
+            <div className="status-message error-message">
+              ✕ Failed to send booking request. Please try again later.
+            </div>
+          )}
+          
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="name">Full Name *</label>
@@ -112,12 +231,30 @@ const BookingModal = ({ isOpen, onClose }) => {
                 required
               >
                 <option value="">Select a service</option>
-                <option value="haircut">Haircut & Hair Colour</option>
-                <option value="manicure">Manicure & Pedicure</option>
-                <option value="bridal">Bridal</option>
-                <option value="hair-spa">Hair Spa</option>
-                <option value="makeup">Makeup</option>
-                <option value="nail-artistry">Nail Artistry</option>
+                <optgroup label="Hair Services">
+                  <option value="hair-cut">Hair Cut</option>
+                  <option value="hair-colour">Hair Colour</option>
+                  <option value="hair-styling">Hair Styling</option>
+                  <option value="hair-treatment">Hair Treatment</option>
+                  <option value="hair-care-rituals">Hair Care Rituals</option>
+                  <option value="hair-extensions">Hair Extensions</option>
+                </optgroup>
+                <optgroup label="Makeup Services">
+                  <option value="light-party-makeup">Light & Party Makeup</option>
+                  <option value="bridal-groom-makeup">Bridal & Groom Makeup</option>
+                  <option value="hair-updos-saree-draping">Hair Updos & Saree Draping</option>
+                  <option value="mehendi">Mehendi</option>
+                </optgroup>
+                <optgroup label="Nail Services">
+                  <option value="nail-artistry">Nail Artistry</option>
+                  <option value="manicure-pedicure">Manicure & Pedicure</option>
+                  <option value="luxury-extensions">Luxury Extensions</option>
+                </optgroup>
+                <optgroup label="Skin & Body Services">
+                  <option value="threading-waxing">Threading & Waxing</option>
+                  <option value="bleach-detain">Bleach & De-Tan</option>
+                  <option value="cleanup-facials">Clean-Up & Facials</option>
+                </optgroup>
               </select>
             </div>
           </div>
@@ -131,6 +268,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 name="date"
                 value={formData.date}
                 onChange={handleInputChange}
+                min={getTodayDate()}
                 required
               />
             </div>
@@ -145,18 +283,11 @@ const BookingModal = ({ isOpen, onClose }) => {
                 required
               >
                 <option value="">Select time</option>
-                <option value="09:00">9:00 AM</option>
-                <option value="10:00">10:00 AM</option>
-                <option value="11:00">11:00 AM</option>
-                <option value="12:00">12:00 PM</option>
-                <option value="13:00">1:00 PM</option>
-                <option value="14:00">2:00 PM</option>
-                <option value="15:00">3:00 PM</option>
-                <option value="16:00">4:00 PM</option>
-                <option value="17:00">5:00 PM</option>
-                <option value="18:00">6:00 PM</option>
-                <option value="19:00">7:00 PM</option>
-                <option value="20:00">8:00 PM</option>
+                {availableTimes.map((slot) => (
+                  <option key={slot.value} value={slot.value}>
+                    {slot.label}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -174,11 +305,20 @@ const BookingModal = ({ isOpen, onClose }) => {
           </div>
 
           <div className="form-actions">
-            <button type="button" className="btn-cancel" onClick={handleClose}>
+            <button 
+              type="button" 
+              className="btn-cancel" 
+              onClick={handleClose}
+              disabled={isSubmitting}
+            >
               Cancel
             </button>
-            <button type="submit" className="btn-submit">
-              Book Now
+            <button 
+              type="submit" 
+              className="btn-submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Book Now'}
             </button>
           </div>
         </form>
