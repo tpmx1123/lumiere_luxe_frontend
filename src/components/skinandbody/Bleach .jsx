@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookingModal from '../BookingModal';
 
 import bleachDeTan1 from '../../assets/bleachde-tan1.png';
 import bleachDeTan2 from '../../assets/bleachde-tan2.png';
 import './Bleach.css';
 import button from '../../assets/Button.png';
 const Bleach = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="bleach-page">
       {/* Content Section */}
@@ -30,13 +41,15 @@ const Bleach = () => {
                 <strong>Includes:</strong> Facial bleach / Body de-tan / Post-care <br />hydration
               </p>
               <div className="scissors-container">
-                <img src={button} alt="Book Now" className="scissors-image" />
-                  
+                <button className="book-now-button" onClick={handleBookNow}>
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

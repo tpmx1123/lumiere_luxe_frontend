@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './hairtreatment.css';
 import hairtreatment1 from '../../assets/hairtreatment1.png';
 import hairtreatment2 from '../../assets/hairtreatment2.png';
 import hairtreatment3 from '../../assets/hairtreatment3.png';
 import scissors from '../../assets/scissors.png';
+import BookingModal from '../BookingModal';
 
 const HairTreatment = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="hair-treatment-section">
       <div className="hair-treatment-content">
@@ -16,8 +27,14 @@ const HairTreatment = () => {
         <p className="hair-treatment-includes">
           <strong>Includes:</strong> Deep repair / Bond reconstruction / Shine restoration
         </p>
+        <div className="scissors-book-container">
         <img src={scissors} alt="Scissors" className="scissors-icon" />
+          <button className="book-now-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </div>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
       <div className="hair-treatment-images">
         <img src={hairtreatment1} alt="Hair treatment consultation" className="hair-treatment-image" />
         <img src={hairtreatment2} alt="Hair treatment application" className="hair-treatment-image" />

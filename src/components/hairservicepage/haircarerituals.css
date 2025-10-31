@@ -70,7 +70,7 @@
 
 .hair-care-rituals-includes {
   font-family: "inter";
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #604A31;
   margin-bottom: 30px;
   line-height: 1.6;
@@ -84,19 +84,52 @@
   font-family:'inter';
 }
 
+.scissors-book-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1px;
+}
+
 .scissors-icon {
   width: 40px;
   height: 40px;
-  margin: -10px 0 0 0;
+  margin: 0;
   display: block;
   opacity: 0.8;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .scissors-icon:hover {
   transform: scale(1.1);
   opacity: 1;
   cursor: pointer;
+}
+
+.book-now-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #906B39;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.book-now-button:hover {
+  background-color: #7a5a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(144, 107, 57, 0.4);
+}
+
+.book-now-button:active {
+  transform: translateY(0);
 }
 
 .hair-care-rituals-images {

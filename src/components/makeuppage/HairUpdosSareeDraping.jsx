@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HairUpdosSareeDraping.css';
 import HairUpdosSareeDraping1 from '../../assets/hairupdossareedraping1.png';
 import HairUpdosSareeDraping2 from '../../assets/hairupdossareedraping2.png';
 import HairUpdosSareeDraping3 from '../../assets/hairupdossareedraping3.png';
-import Button from '../../assets/Button.png';
+import BookingModal from '../BookingModal';
 
 const HairUpdosSareeDraping = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <section className="hair-updos-saree-draping-section">
       <div className="hair-updos-saree-draping-content">
@@ -16,10 +26,13 @@ const HairUpdosSareeDraping = () => {
         <p className="hair-updos-saree-draping-includes">
           <strong>Includes:</strong> Custom hair styling / Saree wrapping / Accessory setting
         </p>
-        <button className="hair-updos-saree-draping-cta">
-          <img src={Button} alt="Arrow button" className="button-icon" />
-        </button>
+        <div className="book-now-container">
+          <button className="book-now-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </div>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
       
       <div className="hair-updos-saree-draping-images">
         <img 

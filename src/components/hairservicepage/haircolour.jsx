@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './haircolour.css';
 import haircolour1 from '../../assets/haircolour1.png';
 import haircolour2 from '../../assets/haircolour2.png';
 import haircolour3 from '../../assets/haircolour3.png';
 import scissors from '../../assets/scissors.png';
+import BookingModal from '../BookingModal';
 
 const HairColor = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="hair-color-section">
       <div className="hair-color-content">
@@ -18,8 +29,14 @@ const HairColor = () => {
         <p className="hair-color-includes">
           <strong>Includes:</strong> Shade consultation / Premium color products / Post-color nourishment
         </p>
+        <div className="scissors-book-container">
         <img src={scissors} alt="Scissors" className="scissors-icon" />
+          <button className="book-now-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </div>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
       <div className="hair-color-images">
         <img src={haircolour1} alt="Hair color consultation with swatch book" className="hair-color-image" />
         <img src={haircolour2} alt="Hair coloring process with foils" className="hair-color-image" />

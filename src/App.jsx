@@ -9,7 +9,11 @@ import SkinBodyServicePage from './pages/SkinBodyServicePage.jsx';
 import MakeupPage from './pages/makeuppage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import BlogPage from './pages/BlogPage.jsx';
+import BlogDetailPage from './pages/BlogDetailPage.jsx';
 import ExploreServices from './pages/ExploreServices.jsx';
+import AdminLogin from './pages/AdminLogin.jsx';
+import AdminPanel from './pages/AdminPanel.jsx';
+import BlogFormPage from './pages/BlogFormPage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import './App.css';
 
@@ -18,17 +22,32 @@ function App() {
     <Router>
       <div className="App">
         <ScrollToTop />
-        <Navbar />
+        
+        {/* Hidden Admin Routes (no navbar) */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/hair-service-in-madhapur" element={<HairServicePage />} />
-          <Route path="/nail-service-in-madhapur" element={<NailServicePage />} />
-          <Route path="/skin-body-service-in-madhapur" element={<SkinBodyServicePage />} />
-          <Route path="/makeup-page-in-madhapur" element={<MakeupPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/explore-services" element={<ExploreServices />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/panel" element={<AdminPanel />} />
+          <Route path="/admin/blog/new" element={<BlogFormPage />} />
+          <Route path="/admin/blog/edit/:id" element={<BlogFormPage />} />
+          
+          {/* Public Routes (with navbar) */}
+          <Route path="*" element={
+            <>
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/hair-service-in-madhapur" element={<HairServicePage />} />
+                <Route path="/nail-service-in-madhapur" element={<NailServicePage />} />
+                <Route path="/skin-body-service-in-madhapur" element={<SkinBodyServicePage />} />
+                <Route path="/makeup-page-in-madhapur" element={<MakeupPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:id" element={<BlogDetailPage />} />
+                <Route path="/explore-services" element={<ExploreServices />} />
+                <Route path="*" element={<ErrorPage />} />
+              </Routes>
+            </>
+          } />
         </Routes>
       </div>
     </Router>

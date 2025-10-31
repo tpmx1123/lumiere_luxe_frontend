@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './hairservicesub.css';
 import hair1 from '../../assets/hair1.png';
 import hair2 from '../../assets/hair2.png';
 import hair3 from '../../assets/hair3.png';
 import scissors from '../../assets/scissors.png';
+import BookingModal from '../BookingModal';
 
 const HairServiceSub = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="hair-service-sub-section">
       
@@ -25,8 +36,14 @@ care to keep your hair strong and radiant.
         <p className="hair-service-sub-includes">
           <strong>Includes:</strong> Consultation / Luxury wash / Customized cut & finish
         </p>
-        <img src={scissors} alt="Scissors" className="scissors-icon" />
+        <div className="scissors-book-container">
+          <img src={scissors} alt="Scissors" className="scissors-icon" />
+          <button className="book-now-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </div>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

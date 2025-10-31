@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookingModal from '../BookingModal';
 
 import manicurepedicureimg1 from '../../assets/manicurepedicureimg1.png';
 import manicurepedicureimg2 from '../../assets/manicurepedicureimg2.png';
 import './MP.css';
 
 const MP = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="mp-page">
       {/* Content Section */}
@@ -35,18 +46,15 @@ with quiet luxury.
 perfection
               </p>
               <div className="mp-arrow">
-               
-                  <img 
-                    src={require('../../assets/Button.png')} 
-                    alt="Book Now" 
-                    className="mp-arrow-img"
-                  />
-               
+                <button className="book-now-button" onClick={handleBookNow}>
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

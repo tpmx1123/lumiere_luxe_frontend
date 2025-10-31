@@ -107,6 +107,38 @@
   background-color: transparent;
 }
 
+.book-now-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1px;
+}
+
+.book-now-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #906B39;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.book-now-button:hover {
+  background-color: #7a5a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(144, 107, 57, 0.4);
+}
+
+.book-now-button:active {
+  transform: translateY(0);
+}
+
 .light-party-makeup-cta:active {
   transform: scale(0.98);
 }

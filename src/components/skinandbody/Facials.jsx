@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookingModal from '../BookingModal';
 
 import facial1 from '../../assets/clean-upfacials1.png';
 import facial2 from '../../assets/clean-upfacials2.png';
@@ -6,6 +7,16 @@ import './Facials.css';
 import button from '../../assets/Button.png';
 
 const Facials = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="facials-page">
       {/* Content Section */}
@@ -22,7 +33,9 @@ long-term skin health              </p>
               <p className="glow-text-includes"><strong>Includes:</strong>  Deep pore cleansing / Hydrating facials / Glow
 therapies</p>
               <div className="scissors-container">
-                <img src={button} alt="Book Now" className="scissors-image" />
+                <button className="book-now-button" onClick={handleBookNow}>
+                  Book Now
+                </button>
               </div>
             </div>
 
@@ -40,6 +53,7 @@ therapies</p>
          
         </div>
       </section>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

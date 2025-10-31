@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookingModal from '../BookingModal';
 import threadingwaxing1 from '../../assets/threadingwaxing1.png';
 import threadingwaxing2 from '../../assets/threadingwaxing2.png';
 import button from '../../assets/Button.png';
 import './Threading.css';
 
 const Threading = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="threading-page">
       {/* Content Section */}
@@ -30,11 +41,9 @@ Type and Lifestyle. Whether It’s A Simple Clean-up, An Indulgent Facial, Or A 
                 Sensitive-skin options
               </p>
               <div className="threading-scissors-container">
-                <img 
-                  src={button} 
-                  alt="Book Now" 
-                  className="threading-scissors-image" 
-                />
+                <button className="book-now-button" onClick={handleBookNow}>
+                  Book Now
+                </button>
               </div>
             </div>
 
@@ -49,6 +58,7 @@ Type and Lifestyle. Whether It’s A Simple Clean-up, An Indulgent Facial, Or A 
           </div>
         </div>
       </section>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

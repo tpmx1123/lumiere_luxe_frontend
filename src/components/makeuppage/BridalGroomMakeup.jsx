@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './BridalGroomMakeup.css';
 import BridalGroomMakeup1 from '../../assets/bridalgroommakeup1.png';
 import BridalGroomMakeup2 from '../../assets/bridalgroommakeup2.png';
 import BridalGroomMakeup3 from '../../assets/bridalgroommakeup3.png';
-import Button from '../../assets/Button.png';
+import BookingModal from '../BookingModal';
 
 const BridalGroomMakeup = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <section className="bridal-groom-makeup-section">
       <div className="bridal-groom-makeup-images">
@@ -34,10 +44,13 @@ const BridalGroomMakeup = () => {
         <p className="bridal-groom-makeup-includes">
           <strong>Includes:</strong> Bridal & groom makeup / Pre-bridal rituals / Post-care guidance
         </p>
-        <button className="bridal-groom-makeup-cta">
-          <img src={Button} alt="Arrow button" className="button-icon" />
-        </button>
+        <div className="book-now-container">
+          <button className="book-now-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </div>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </section>
   );
 };

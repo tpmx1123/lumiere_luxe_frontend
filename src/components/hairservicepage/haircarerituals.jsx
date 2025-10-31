@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './haircarerituals.css';
 import haircarerituals1 from '../../assets/haircarerituals1.png';
 import haircarerituals2 from '../../assets/haircarerituals2.png';
 import haircarerituals3 from '../../assets/haircarerituals3.png';
 import scissors from '../../assets/scissors.png';
+import BookingModal from '../BookingModal';
 
 const HairCareRituals = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="hair-care-rituals-section">
       <div className="hair-care-rituals-images">
@@ -22,11 +33,15 @@ const HairCareRituals = () => {
           <strong>Includes:</strong> Scalp massage / Nourishment therapy 
           / Hair wellness consultation
         </p>
+        <div className="scissors-book-container">
         <img src={scissors} alt="Scissors icon" className="scissors-icon" />
+          <button className="book-now-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </div>
-      
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
-    
   );
 };
 

@@ -154,7 +154,7 @@
 
 .bridal-groom-makeup-description {
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0 0 15px;
   font-weight: 300;
   color: #604a31;
@@ -165,7 +165,7 @@
 }
 
 .bridal-groom-makeup-includes {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   color: #604a31;
   font-family: 'Inter', sans-serif;
@@ -199,6 +199,38 @@
 .bridal-groom-makeup-cta:hover {
   transform: scale(1.1);
   background-color: transparent;
+}
+
+.book-now-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1px;
+}
+
+.book-now-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #906B39;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.book-now-button:hover {
+  background-color: #7a5a2f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(144, 107, 57, 0.4);
+}
+
+.book-now-button:active {
+  transform: translateY(0);
 }
 
 .bridal-groom-makeup-cta:active {
@@ -254,7 +286,7 @@
   }
   
   .bridal-groom-makeup-includes {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 25px;
     text-align: left;
   }

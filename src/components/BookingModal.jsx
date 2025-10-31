@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { bookingAPI } from '../services/api';
 import './BookingModal.css';
 
 const BookingModal = ({ isOpen, onClose }) => {
@@ -95,12 +96,23 @@ const BookingModal = ({ isOpen, onClose }) => {
     setSubmitStatus(null);
 
     try {
+      // Prepare booking data for backend
+      const bookingData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        serviceName: formData.service,
+        date: formData.date,
+        time: formData.time,
+        message: formData.message || ''
+      };
+
       // Initialize EmailJS - Update these values with your actual credentials
       const serviceId = 'service_u4l22j8';
       const templateId = 'template_gen0rad';
       const publicKey = 'rGfPjy7-itYX_H8zk';
 
-      // Send email using EmailJS
+      // 1️⃣ Send email using EmailJS
       await emailjs.send(
         serviceId,
         templateId,
@@ -117,6 +129,9 @@ const BookingModal = ({ isOpen, onClose }) => {
         },
         publicKey
       );
+
+      // 2️⃣ Save booking to backend database
+      await bookingAPI.submitBooking(bookingData);
 
       setSubmitStatus('success');
       // Reset form
@@ -136,7 +151,7 @@ const BookingModal = ({ isOpen, onClose }) => {
         setSubmitStatus(null);
       }, 2000);
     } catch (error) {
-      console.error('Email sending failed:', error);
+      console.error('Booking submission failed:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -164,8 +179,14 @@ const BookingModal = ({ isOpen, onClose }) => {
     <div className="booking-modal-overlay" onClick={handleClose}>
       <div className="booking-modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2 className="modal-title">Book Your Appointment</h2>
-          <button className="close-button" onClick={handleClose}>
+          <div className="modal-header-content">
+            <div className="modal-icon">✨</div>
+            <div>
+              <h2 className="modal-title">Book Your Appointment</h2>
+              <p className="modal-subtitle">Fill in the details below and we'll get back to you</p>
+            </div>
+          </div>
+          <button className="close-button" onClick={handleClose} aria-label="Close">
             ✕
           </button>
         </div>
@@ -173,36 +194,46 @@ const BookingModal = ({ isOpen, onClose }) => {
         <form className="booking-form" onSubmit={handleSubmit}>
           {submitStatus === 'success' && (
             <div className="status-message success-message">
-              ✓ Booking request sent successfully! You'll receive a confirmation shortly.
+              <span className="status-icon">✓</span>
+              <span>Booking request sent successfully! You'll receive a confirmation shortly.</span>
             </div>
           )}
           {submitStatus === 'error' && (
             <div className="status-message error-message">
-              ✕ Failed to send booking request. Please try again later.
+              <span className="status-icon">✕</span>
+              <span>Failed to send booking request. Please try again later.</span>
             </div>
           )}
           
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="name">Full Name *</label>
+              <label htmlFor="name">
+               
+                Full Name *
+              </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
+                placeholder="Enter your full name"
                 required
               />
             </div>
             
             <div className="form-group">
-              <label htmlFor="email">Email Address *</label>
+              <label htmlFor="email">
+                
+                Email Address *
+              </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
+                placeholder="your.email@example.com"
                 required
               />
             </div>
@@ -210,19 +241,26 @@ const BookingModal = ({ isOpen, onClose }) => {
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="phone">Phone Number *</label>
+              <label htmlFor="phone">
+                
+                Phone Number *
+              </label>
               <input
                 type="tel"
                 id="phone"
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
+                placeholder="+91 98765 43210"
                 required
               />
             </div>
             
             <div className="form-group">
-              <label htmlFor="service">Service *</label>
+              <label htmlFor="service">
+               
+                Service *
+              </label>
               <select
                 id="service"
                 name="service"
@@ -243,7 +281,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                   <option value="light-party-makeup">Light & Party Makeup</option>
                   <option value="bridal-groom-makeup">Bridal & Groom Makeup</option>
                   <option value="hair-updos-saree-draping">Hair Updos & Saree Draping</option>
-                  <option value="mehendi">Mehendi</option>
+                
                 </optgroup>
                 <optgroup label="Nail Services">
                   <option value="nail-artistry">Nail Artistry</option>
@@ -261,7 +299,10 @@ const BookingModal = ({ isOpen, onClose }) => {
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="date">Preferred Date *</label>
+              <label htmlFor="date">
+               
+                Preferred Date *
+              </label>
               <input
                 type="date"
                 id="date"
@@ -274,7 +315,10 @@ const BookingModal = ({ isOpen, onClose }) => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="time">Preferred Time *</label>
+              <label htmlFor="time">
+               
+                Preferred Time *
+              </label>
               <select
                 id="time"
                 name="time"
@@ -293,7 +337,10 @@ const BookingModal = ({ isOpen, onClose }) => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="message">Additional Message</label>
+            <label htmlFor="message">
+              <span className="label-icon">💬</span>
+              Additional Message
+            </label>
             <textarea
               id="message"
               name="message"
@@ -318,7 +365,17 @@ const BookingModal = ({ isOpen, onClose }) => {
               className="btn-submit"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Sending...' : 'Book Now'}
+              {isSubmitting ? (
+                <>
+                  <span className="btn-spinner"></span>
+                  <span>Sending...</span>
+                </>
+              ) : (
+                <>
+                  <span>✨</span>
+                  <span>Book Now</span>
+                </>
+              )}
             </button>
           </div>
         </form>

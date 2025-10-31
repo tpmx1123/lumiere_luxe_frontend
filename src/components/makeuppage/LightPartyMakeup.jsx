@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LightPartyMakeup.css';
 import LightPartyMakeup1 from '../../assets/Lightpartymakeup1.png';
 import LightPartyMakeup2 from '../../assets/Lightpartymakeup2.png';
 import LightPartyMakeup3 from '../../assets/Lightpartymakeup3.png';
-import Button from '../../assets/Button.png';
+import BookingModal from '../BookingModal';
 
 const LightPartyMakeup = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <section className="light-party-makeup-section">
       <div className="light-party-makeup-content">
@@ -16,10 +26,13 @@ const LightPartyMakeup = () => {
         <p className="light-party-makeup-includes">
           <strong>Includes:</strong> Event & party makeup / Natural finishes / Long-wear perfection
         </p>
-        <button className="light-party-makeup-cta">
-          <img src={Button} alt="Arrow button" className="button-icon" />
-        </button>
+        <div className="book-now-container">
+          <button className="book-now-button" onClick={handleBookNow}>
+            Book Now
+          </button>
+        </div>
       </div>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
       
       <div className="light-party-makeup-images">
         <img 

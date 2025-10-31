@@ -135,6 +135,31 @@
     margin-top: 25px;
     text-align: left;
   }
+
+  .book-now-button {
+    background-color: #906B3A;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0.5px;
+  }
+
+  .book-now-button:hover {
+    background-color: #7a5730;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(144, 107, 58, 0.3);
+  }
+
+  .book-now-button:active {
+    transform: translateY(0);
+  }
   
   .threading-scissors-image {
     height: 50px;

@@ -1,0 +1,373 @@
+.admin-bookings {
+  width: 100%;
+}
+
+.admin-bookings-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 1.5rem;
+  color: #906B3A;
+}
+
+.admin-bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.admin-bookings-header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #906B3A;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.booking-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.booking-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.export-csv-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.export-csv-btn:hover {
+  background: linear-gradient(135deg, #218838 0%, #1ea080 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.export-csv-btn:active {
+  transform: translateY(0);
+}
+
+.export-csv-btn span:first-child {
+  font-size: 1.1rem;
+}
+
+.filter-btn {
+  background: rgba(144, 107, 58, 0.1);
+  color: #604A31;
+  border: 2px solid rgba(144, 107, 58, 0.2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.filter-btn:hover {
+  background: rgba(144, 107, 58, 0.15);
+  border-color: rgba(144, 107, 58, 0.4);
+}
+
+.filter-btn.active {
+  background: #906B3A;
+  color: white;
+  border-color: #906B3A;
+}
+
+.bookings-table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+}
+
+.bookings-table thead {
+  background: #906B3A;
+  color: white;
+}
+
+.bookings-table th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.bookings-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: #604A31;
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+.bookings-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.bookings-table tbody tr:hover {
+  background: rgba(144, 107, 58, 0.05);
+}
+
+.bookings-table tbody tr.unread-booking {
+  background: rgba(144, 107, 58, 0.08);
+  font-weight: 500;
+}
+
+.bookings-table tbody tr.unread-booking:hover {
+  background: rgba(144, 107, 58, 0.12);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.unread-badge {
+  background: #ff6b6b;
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.read-badge {
+  background: #d4edda;
+  color: #155724;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.service-cell {
+  font-weight: 500;
+  max-width: 150px;
+  word-wrap: break-word;
+}
+
+.datetime-cell {
+  min-width: 120px;
+}
+
+.date-value {
+  font-weight: 600;
+  color: #906B3A;
+  margin-bottom: 4px;
+}
+
+.time-value {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.message-cell {
+  max-width: 250px;
+  word-wrap: break-word;
+}
+
+.message-text {
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-message {
+  color: #999;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.received-cell {
+  font-size: 0.85em;
+  color: #666;
+  white-space: nowrap;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 60px 20px !important;
+  color: #999;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mark-read-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  min-width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark-read-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.mark-read-btn:hover {
+  background: #138496;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(23, 162, 184, 0.3);
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bookings-table {
+    min-width: 1000px;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+
+  .message-cell {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-bookings-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .booking-header-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-filters {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .filter-btn {
+    flex: 1;
+  }
+
+  .export-csv-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bookings-table-container {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bookings-table {
+    min-width: 900px;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 10px 6px;
+    font-size: 0.8rem;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .mark-read-btn,
+  .delete-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .service-cell {
+    max-width: 120px;
+  }
+
+  .message-cell {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-bookings-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .bookings-table {
+    min-width: 800px;
+  }
+
+  .date-value,
+  .time-value {
+    font-size: 0.75rem;
+  }
+
+  .received-cell {
+    font-size: 0.75rem;
+  }
+}
+

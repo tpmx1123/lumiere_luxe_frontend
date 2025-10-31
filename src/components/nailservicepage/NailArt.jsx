@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookingModal from '../BookingModal';
 
 import NailArt1 from '../../assets/nailartistryimg1.png';
 import NailArt2 from '../../assets/nailartistryimg2.png';
 import './NailArt.css';
 
 const NailArt = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="nailart-page">
       {/* Content Section */}
@@ -20,7 +31,9 @@ skin-friendly,long-wear products that maintain both style
 and nail health.              </p>
            <p className="glow-text-includes"><strong>Includes:</strong>   Bespoke design / Gel & chrome finishes / Hand painted detailing</p>
               <div className="scissors-container">
-                <img src={require('../../assets/Button.png')} alt="Arrow" className="scissors-image" />
+                <button className="book-now-button" onClick={handleBookNow}>
+                  Book Now
+                </button>
               </div>
             </div>
 
@@ -33,11 +46,9 @@ and nail health.              </p>
               </div>
             </div>
           </div>
-          
-          
-         
         </div>
       </section>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BookingModal from '../BookingModal';
 
 import luxuryextension1 from '../../assets/luxuryextensionsimg1.png';
 import luxuryextension2 from '../../assets/luxuryextensionsimg2.png';
 import './LuxuryExtensions.css';
 
 const LuxuryExtensions = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  const handleBookNow = () => {
+    setIsBookingModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsBookingModalOpen(false);
+  };
+
   return (
     <div className="le-page">
       {/* Content Section */}
@@ -19,7 +30,9 @@ extensions blend seamlessly with your nails, offering
 comfort, durability, and a flawless finish.              </p>
            <p className="le-includes"><strong>Includes:</strong>   Bespoke design / Gel & chrome finishes / Hand painted detailing</p>
               <div className="le-arrow">
-                <img src={require('../../assets/Button.png')} alt="Arrow" className="le-arrow-img" />
+                <button className="book-now-button" onClick={handleBookNow}>
+                  Book Now
+                </button>
               </div>
             </div>
 
@@ -32,11 +45,9 @@ comfort, durability, and a flawless finish.              </p>
               </div>
             </div>
           </div>
-          
-          
-         
         </div>
       </section>
+      <BookingModal isOpen={isBookingModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };
