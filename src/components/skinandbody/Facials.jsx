@@ -4,7 +4,6 @@ import BookingModal from '../BookingModal';
 import facial1 from '../../assets/clean-upfacials1.png';
 import facial2 from '../../assets/clean-upfacials2.png';
 import './Facials.css';
-import button from '../../assets/Button.png';
 
 const Facials = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);

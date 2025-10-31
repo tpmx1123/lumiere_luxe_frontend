@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import BookingModal from '../BookingModal';
 import threadingwaxing1 from '../../assets/threadingwaxing1.png';
 import threadingwaxing2 from '../../assets/threadingwaxing2.png';
-import button from '../../assets/Button.png';
 import './Threading.css';
 
 const Threading = () => {

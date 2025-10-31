@@ -4,7 +4,6 @@ import BookingModal from '../BookingModal';
 import bleachDeTan1 from '../../assets/bleachde-tan1.png';
 import bleachDeTan2 from '../../assets/bleachde-tan2.png';
 import './Bleach.css';
-import button from '../../assets/Button.png';
 const Bleach = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 

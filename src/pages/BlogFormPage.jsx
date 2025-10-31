@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { blogAPI } from '../services/api';
 import { uploadImageToCloudinary } from '../services/cloudinary';
@@ -25,19 +25,7 @@ const BlogFormPage = () => {
 
   const isEditMode = !!id;
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      navigate('/admin/login');
-      return;
-    }
-
-    if (isEditMode) {
-      fetchBlogData();
-    }
-  }, [id, navigate, isEditMode]);
-
-  const fetchBlogData = async () => {
+  const fetchBlogData = useCallback(async () => {
     try {
       setLoading(true);
       const blogs = await blogAPI.getAllBlogsAdmin();
@@ -64,7 +52,19 @@ const BlogFormPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id, navigate]);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/admin/login');
+      return;
+    }
+
+    if (isEditMode) {
+      fetchBlogData();
+    }
+  }, [isEditMode, fetchBlogData, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
